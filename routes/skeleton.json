@@ -51,7 +51,7 @@
                       },
                       {
                         "element": "cwrap-template",
-                        "text": "cwrapTemplate[arrowLink(arrowColor=cwrapArray[white,black,black],arrowLinkText=cwrapArray[GET AN INVITE,VIEW THE STORIES,VIEW THE STORIES])]"
+                        "text": "cwrapTemplate[arrowLink(arrowColor=cwrapArray[white,black,black],arrowLinkText=cwrapArray[GET AN INVITE,VIEW THE STORIES,VIEW THE STORIES],underlineAnimation=underline-animation)]"
                       }
                     ]
                   }
@@ -73,6 +73,12 @@
           "blueprint": {
             "count": "4",
             "element": "li",
+            "extend": [
+              {
+                "extension": ":hover",
+                "style": "transform: translateY(-24px) !important;"
+              }
+            ],
             "style": "min-height: 500px; display: flex; align-items: end; position: relative;",
             "children": [
               {
@@ -90,6 +96,30 @@
                     "element": "div",
                     "style": "max-width: 280px; width: 100%; min-height: 99px; margin: auto auto 40px auto; color: white;",
                     "children": [
+                      {
+                        "element": "section",
+                        "style": "display: flex; flex-direction: column; gap: 8px;",
+                        "children": [
+                          {
+                            "element": "h2",
+                            "attributes": {
+                              "class": "title-gallery"
+                            },
+                            "text": "cwrapGlobal[gallery.cwrapIndex.title]"
+                          },
+                          {
+                            "element": "p",
+                            "attributes": {
+                              "class": "author-gallery"
+                            },
+                            "text": "cwrapGlobal[gallery.cwrapIndex.author]"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "div",
+                        "style": "border-bottom: 1px solid #FFFFFF; opacity: 0.25; width: 100%; margin-block: 16px 20px;"
+                      },
                       {
                         "element": "cwrap-template",
                         "text": "cwrapTemplate[arrowLink(arrowColor=white,arrowLinkText=READ STORY,arrowJustify=space-between)]"

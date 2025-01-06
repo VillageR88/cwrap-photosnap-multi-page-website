@@ -43,14 +43,37 @@
             "style": "font-size: 40px; line-height: 48px; margin: 0; letter-spacing: 4.17px; font-weight: bold;"
         },
         {
-            "name": "description",
+            "name": "title-gallery",
             "type": "class",
-            "style": "font-size: 15px; line-height: 25px; letter-spacing: 0; margin: 0;"
+            "style": "font-weight: bold; font-size: 18px; line-height: 25px; margin: 0;"
+        },
+        {
+            "name": "author-gallery",
+            "type": "class",
+            "style": "font-size: 13px; margin: 0;"
         }
     ],
     "const": {
         "homeDesc1": "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
         "homeDesc2": "We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.",
-        "homeDesc3": "Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it."
+        "homeDesc3": "Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it.",
+        "gallery": [
+            {
+                "title": "The Mountains",
+                "author": "by John Appleseed"
+            },
+            {
+                "title": "Sunset Cityscapes",
+                "author": "by Benjamin Cruz"
+            },
+            {
+                "title": "18 Days Voyage",
+                "author": "by Alexei Borodin"
+            },
+            {
+                "title": "Architecturals",
+                "author": "by Samantha Brooke"
+            }
+        ]
     }
 }
