@@ -36,6 +36,21 @@
             "name": "body",
             "type": "element",
             "style": "font-family: DM Sans, serif;"
+        },
+        {
+            "name": "title",
+            "type": "class",
+            "style": "font-size: 40px; line-height: 48px; margin: 0; letter-spacing: 4.17px; font-weight: bold;"
+        },
+        {
+            "name": "description",
+            "type": "class",
+            "style": "font-size: 15px; line-height: 25px; letter-spacing: 0; margin: 0;"
         }
-    ]
+    ],
+    "const": {
+        "homeDesc1": "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
+        "homeDesc2": "We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.",
+        "homeDesc3": "Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it."
+    }
 }
