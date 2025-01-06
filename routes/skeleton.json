@@ -51,7 +51,7 @@
                       },
                       {
                         "element": "cwrap-template",
-                        "text": "cwrapTemplate[arrowLink(arrowColor=cwrapArray[white,black,black],arrowLinkText=cwrapArray[GET AN INVITE,VIEW THE STORIES,VIEW THE STORIES])]"
+                        "text": "cwrapTemplate[arrowLink(arrowColor=cwrapArray[white,black,black],arrowLinkText=cwrapArray[GET AN INVITE,VIEW THE STORIES,VIEW THE STORIES],underlineAnimation=underline-animation)]"
                       }
                     ]
                   }
