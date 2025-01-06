@@ -1,4 +1,61 @@
 {
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body]"
+  "text": "cwrapTemplate[body]",
+  "passover": [
+    {
+      "element": "main",
+      "style": "max-width: 1440px; width: 100%; display: flex; flex-directions: column;",
+      "children": [
+        {
+          "element": "ul",
+          "extend": [
+            {
+              "extension": " > li:nth-of-type(even)",
+              "style": "flex-direction: row-reverse;"
+            }
+          ],
+          "style": "display: flex; flex-direction: column; width: 100%; margin: 0; padding: 0; line-style: none;",
+          "blueprint": {
+            "count": "3",
+            "element": "li",
+            "style": "display: flex; ",
+            "children": [
+              {
+                "element": "div",
+                "style": "background-color: cwrapArray[black,white,white]; max-width: 610px; width: 100%; display:flex; align-items: center; justify-content: center;",
+                "children": [
+                  {
+                    "element": "div",
+                    "style": "max-width: 387px; width: 100%; display: flex; flex-direction: column; color: cwrapArray[white,black,black];",
+                    "children": [
+                      {
+                        "element": "section",
+                        "style": "display: flex; flex-direction: column; ",
+                        "children": [
+                          {
+                            "element": "cwrapArray[h1,h2,h2]",
+                            "attributes": {
+                              "class": "title"
+                            },
+                            "text": "cwrapArray[CREATE AND SHARE YOUR PHOTO STORIES.,BEAUTIFUL STORIES EVERY TIME,DESIGNED FOR EVERYONE]"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "element": "img",
+                "style": "width: 100%; display: flex;",
+                "attributes": {
+                  "src": "static/images/home/desktop/cwrapArray[create-and-share,beautiful-stories,designed-for-everyone].jpg"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }
