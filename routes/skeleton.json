@@ -73,7 +73,7 @@
         },
         {
           "element": "ul",
-          "style": "list-style: none; max-width: 1110px; width: 100%; padding: 0; display: flex; margin: 120px auto 120px auto; box-sizing: border-box; justify-content: space-between; align-items: start;",
+          "style": "gap: 30px; list-style: none; max-width: 1110px; width: 100%; padding: 0; display: flex; margin: 120px auto 120px auto; box-sizing: border-box; justify-content: space-between; align-items: start;",
           "blueprint": {
             "count": "3",
             "element": "li",
@@ -98,6 +98,7 @@
                   },
                   {
                     "element": "p",
+                    "style": "opacity: 0.6",
                     "attributes": {
                       "class": "description"
                     },
