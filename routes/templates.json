@@ -73,6 +73,40 @@
         ]
     },
     {
+        "element": "ul",
+        "name": "ulNavigation",
+        "extend": [
+            {
+                "extension": "> li:nth-of-type(1).omitFirst",
+                "style": "display: none;"
+            }
+        ],
+        "style": "display: flex; flex-direction: cwrapProperty[ulNavigationDirection=cwrapOmit]; align-items: center; list-style: none; padding: 0; margin: 0; box-sizing: border-box; gap: 37px;",
+        "blueprint": {
+            "count": "4",
+            "element": "li",
+            "attributes": {
+                "class": "cwrapArray[cwrapProperty[omitFirst=cwrapOmit],,,]"
+            },
+            "children": [
+                {
+                    "element": "a",
+                    "style": "transition: 300ms; font-weight: bold; font-size: 12px; letter-spacing: 2px; text-decoration: none; color: cwrapProperty[ulNavigationColor=black];",
+                    "extend": [
+                        {
+                            "extension": ":hover",
+                            "style": "opacity: 0.3;"
+                        }
+                    ],
+                    "attributes": {
+                        "href": "#"
+                    },
+                    "text": "cwrapArray[HOME,STORIES,FEATURES,PRICING]"
+                }
+            ]
+        }
+    },
+    {
         "element": "body",
         "name": "body",
         "style": "box-sizing: border-box; align-items: center; background-color: white; margin: 0; padding: 0; min-height: 100dvh; display: flex; flex-direction: column;",
@@ -86,22 +120,8 @@
                         "text": "cwrapTemplate[logo]"
                     },
                     {
-                        "element": "ul",
-                        "style": "display: flex; align-items: center; list-style: none; padding: 0; margin: 0; box-sizing: border-box; gap: 37px;",
-                        "blueprint": {
-                            "count": "3",
-                            "element": "li",
-                            "children": [
-                                {
-                                    "element": "a",
-                                    "attributes": {
-                                        "href": "#"
-                                    },
-                                    "style": "font-weight: bold; font-size: 12px; letter-spacing: 2px; text-decoration: none; color: black;",
-                                    "text": "cwrapArray[STORIES,FEATURES,PRICING]"
-                                }
-                            ]
-                        }
+                        "element": "cwrap-template",
+                        "text": "cwrapTemplate[ulNavigation(omitFirst=omitFirst)]"
                     },
                     {
                         "element": "a",
@@ -109,7 +129,13 @@
                             "href": "#"
                         },
                         "text": "GET AN INVITE",
-                        "style": "text-decoration: none; font-size: 12px; font-weight: bold; letter-spacing: 2px; max-width: 158px; width: 100%; min-height: 40px; background-color: #000000; color: white; display: flex; align-items: center; justify-content: center;"
+                        "extend": [
+                            {
+                                "extension": ":hover",
+                                "style": "background-color: #DFDFDF; color: black;"
+                            }
+                        ],
+                        "style": "transition: 300ms; text-decoration: none; font-size: 12px; font-weight: bold; letter-spacing: 2px; max-width: 158px; width: 100%; min-height: 40px; background-color: #000000; color: white; display: flex; align-items: center; justify-content: center;"
                     }
                 ]
             },
@@ -122,7 +148,7 @@
                 "children": [
                     {
                         "element": "div",
-                        "style": "max-width: 1110px; width: 100%; box-sizing: border-box;",
+                        "style": "max-width: 1110px; width: 100%; box-sizing: border-box; display: flex;",
                         "children": [
                             {
                                 "element": "div",
@@ -170,6 +196,10 @@
                                         }
                                     }
                                 ]
+                            },
+                            {
+                                "element": "cwrap-template",
+                                "text": "cwrapTemplate[ulNavigation(ulNavigationColor=white,ulNavigationDirection=column)]"
                             }
                         ]
                     }
