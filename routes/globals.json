@@ -43,6 +43,11 @@
             "style": "font-size: 40px; line-height: 48px; margin: 0; letter-spacing: 4.17px; font-weight: bold;"
         },
         {
+            "name": "description",
+            "type": "class",
+            "style": "font-size: 15px; line-height: 25px; letter-spacing: 0; margin: 0;"
+        },
+        {
             "name": "title-gallery",
             "type": "class",
             "style": "font-weight: bold; font-size: 18px; line-height: 25px; margin: 0;"
