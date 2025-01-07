@@ -160,14 +160,33 @@
         "extend": [
             {
                 "extension": " > span.underline-animation::before",
-                "style": "content: \"\"; position: absolute; left: 50%; top: 14px; height: 1px; background: cwrapProperty[arrowColor=arrowColor]; width: 0%; bottom: 5px; z-index: -1; transition: width 300ms ease-in-out, left 300ms ease-in-out; "
+                "style": "content: \"\"; position: absolute; left: 50%; top: 14px; height: 1px; background: cwrapProperty[arrowColor=arrowColor]; width: 0%; bottom: 5px; z-index: -1; transition: width 300ms ease-in-out, left 300ms ease-in-out;"
             },
             {
                 "extension": ":hover > span.underline-animation::before",
                 "style": "width: 100%; left: 0; transform: translateX(0) scale(0.98,1.05); filter: drop-shadow(0 0 6px cwrapProperty[arrowColor=arrowColor]);"
             }
         ],
-        "style": " display: flex; gap: 17px; align-items: center; text-decoration: unset; color: unset; justify-content: cwrapProperty[arrowJustify=cwrapOmit];",
+        "style": "display: flex; gap: 17px; align-items: center; text-decoration: unset; color: unset; justify-content: cwrapProperty[arrowJustify=cwrapOmit]; pointer-events: cwrapProperty[arrowEvents=cwrapOmit];",
+        "children": [
+            {
+                "element": "span",
+                "attributes": {
+                    "class": "cwrapProperty[underlineAnimation=cwrapOmit]"
+                },
+                "style": "position: relative; z-index: 0; font-weight: bold; font-size: 12px; letter-spacing: 2px;",
+                "text": "cwrapProperty[arrowLinkText=arrowLinkText]"
+            },
+            {
+                "element": "cwrap-template",
+                "text": "cwrapTemplate[arrow]"
+            }
+        ]
+    },
+    {
+        "element": "div",
+        "name": "arrowLinkImitation",
+        "style": "display: flex; gap: 17px; align-items: center; text-decoration: unset; color: unset; justify-content: cwrapProperty[arrowJustify=cwrapOmit]; pointer-events: cwrapProperty[arrowEvents=cwrapOmit];",
         "children": [
             {
                 "element": "span",
