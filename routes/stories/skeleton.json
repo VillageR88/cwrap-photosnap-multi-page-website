@@ -3,8 +3,68 @@
   "text": "cwrapTemplate[body(prefix=../)]",
   "passover": [
     {
+      "element": "div",
+      "style": "height: 650px; position: relative; display: flex; align-items: center;",
+      "children": [
+        {
+          "element": "img",
+          "style": "position: absolute; display: flex; ",
+          "attributes": {
+            "src": "../static/images/stories/desktop/moon-of-appalacia.jpg"
+          }
+        },
+        {
+          "element": "div",
+          "style": "max-width: 387px; position: relative; display: flex; flex-direction: column; color: white; margin: auto auto auto 112px;",
+          "children": [
+            {
+              "element": "p",
+              "style": "margin: 0; font-size: 12px; font-weight: bold; letter-spacing: 2px;",
+              "text": "LAST MONTH’S FEATURED STORY"
+            },
+            {
+              "element": "h1",
+              "style": "margin-top: 24px;",
+              "text": "HAZY FULL MOON OF APPALACHIA",
+              "attributes": {
+                "class": "title"
+              }
+            },
+            {
+              "element": "div",
+              "style": "display: flex; gap: 9px; align-items: center; margin-top: 64px;",
+              "children": [
+                {
+                  "element": "p",
+                  "style": "opacity: 0.75; font-size: 13px; margin: 0;",
+                  "text": "March 2nd 2020"
+                },
+                {
+                  "element": "p",
+                  "style": "font-size: 13px; margin: 0;",
+                  "text": "by John Appleseed"
+                }
+              ]
+            },
+            {
+              "element": "p",
+              "style": "opacity: 0.6; margin-block: 24px;",
+              "attributes": {
+                "class": "description"
+              },
+              "text": "The dissected plateau area, while not actually made up of geological mountains, is popularly called \"mountains,\" especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged."
+            },
+            {
+              "element": "cwrap-template",
+              "text": "cwrapTemplate[arrowLink(arrowColor=white,arrowLinkText=READ THE STORY,underlineAnimation=underline-animation)]"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "element": "cwrap-template",
-      "text": "cwrapTemplate[gallery(prefix=../,galleryCount=5)]"
+      "text": "cwrapTemplate[gallery(prefix=../,galleryCount=16)]"
     }
   ]
 }

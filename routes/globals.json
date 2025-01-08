@@ -65,23 +65,83 @@
         "gallery": [
             {
                 "title": "The Mountains",
-                "author": "by John Appleseed"
+                "author": "by John Appleseed",
+                "image": "static/images/stories/desktop/mountains.jpg"
             },
             {
                 "title": "Sunset Cityscapes",
-                "author": "by Benjamin Cruz"
+                "author": "by Benjamin Cruz",
+                "image": "static/images/stories/desktop/cityscapes.jpg"
             },
             {
                 "title": "18 Days Voyage",
-                "author": "by Alexei Borodin"
+                "author": "by Alexei Borodin",
+                "image": "static/images/stories/desktop/18-days-voyage.jpg"
             },
             {
                 "title": "Architecturals",
-                "author": "by Samantha Brooke"
+                "author": "by Samantha Brooke",
+                "image": "static/images/stories/desktop/architecturals.jpg"
             },
             {
                 "title": "Rage of The Sea",
-                "author": "by Mohammed Abdul"
+                "author": "by Mohammed Abdul",
+                "image": "static/images/stories/desktop/world-tour.jpg"
+            },
+            {
+                "title": "Unforeseen Corners",
+                "author": "by William Malcolm",
+                "image": "static/images/stories/desktop/unforeseen-corners.jpg"
+            },
+            {
+                "title": "King on Africa: Part II",
+                "author": "by Tim Hillenburg",
+                "image": "static/images/stories/desktop/king-on-africa.jpg"
+            },
+            {
+                "title": "The Trip to Nowhere",
+                "author": "by Felicia Rourke",
+                "image": "static/images/stories/desktop/trip-to-nowhere.jpg"
+            },
+            {
+                "title": "Rage of The Sea",
+                "author": "by Mohammed Abdul",
+                "image": "static/images/stories/desktop/rage-of-the-sea.jpg"
+            },
+            {
+                "title": "Running Free",
+                "author": "by Michelle",
+                "image": "static/images/stories/desktop/running-free.jpg"
+            },
+            {
+                "title": "Behind the Waves",
+                "author": "by Lamarr Wilson",
+                "image": "static/images/stories/desktop/behind-the-waves.jpg"
+            },
+            {
+                "title": "Calm Waters",
+                "author": "by Samantha Brooke",
+                "image": "static/images/stories/desktop/calm-waters.jpg"
+            },
+            {
+                "title": "The Milky Way",
+                "author": "by Benjamin Cruz",
+                "image": "static/images/stories/desktop/milky-way.jpg"
+            },
+            {
+                "title": "Night at The Dark Forest",
+                "author": "by Mohammed Abdul",
+                "image": "static/images/stories/desktop/dark-forest.jpg"
+            },
+            {
+                "title": "Somwarpet’s Beauty",
+                "author": "by Michelle",
+                "image": "static/images/stories/desktop/somwarpet.jpg"
+            },
+            {
+                "title": "Land of Dreams",
+                "author": "by William Malcolm",
+                "image": "static/images/stories/desktop/land-of-dreams.jpg"
             }
         ]
     }

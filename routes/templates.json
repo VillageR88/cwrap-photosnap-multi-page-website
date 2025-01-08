@@ -617,7 +617,7 @@
                                     "element": "img",
                                     "style": "position: absolute; z-index: -1; top: 0; width: 100%; height: 100%; object-fit: cover; display: flex;",
                                     "attributes": {
-                                        "src": "cwrapProperty[prefix=./]static/images/stories/desktop/cwrapArray[mountains,cityscapes,18-days-voyage,architecturals].jpg"
+                                        "src": "cwrapProperty[prefix=./]cwrapGlobal[gallery.cwrapIndex.image]"
                                     }
                                 },
                                 {
