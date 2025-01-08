@@ -89,7 +89,7 @@
                 "style": "display: none;"
             }
         ],
-        "style": "display: flex; justify-content: space-between; flex-direction: cwrapProperty[ulNavigationDirection=cwrapOmit]; align-items: cwrapProperty=[ulNavigationAlign=center]; list-style: none; padding: 0; margin: 0; box-sizing: border-box; gap: cwrapProperty[ulNavigationGap=37px];",
+        "style": "display: flex; justify-content: space-between; flex-direction: cwrapProperty[ulNavigationDirection=cwrapOmit]; align-items: cwrapProperty[ulNavigationAlign=center]; list-style: none; padding: 0; margin: 0; box-sizing: border-box; gap: cwrapProperty[ulNavigationGap=37px];",
         "blueprint": {
             "count": "4",
             "element": "li",
