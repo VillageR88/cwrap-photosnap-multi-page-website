@@ -1,5 +1,10 @@
 {
   "element": "cwrap-template",
   "text": "cwrapTemplate[body(prefix=../)]",
-  "passover": []
+  "passover": [
+    {
+      "element": "cwrap-template",
+      "text": "cwrapTemplate[gallery(prefix=../)]"
+    }
+  ]
 }

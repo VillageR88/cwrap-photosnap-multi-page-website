@@ -146,7 +146,13 @@
                 ]
             },
             {
-                "element": "cwrap-passover"
+                "element": "main",
+                "style": "max-width: 1440px; width: 100%; display: flex; flex-direction: column;",
+                "children": [
+                    {
+                        "element": "cwrap-passover"
+                    }
+                ]
             },
             {
                 "element": "footer",
@@ -611,7 +617,7 @@
                                     "element": "img",
                                     "style": "position: absolute; z-index: -1; top: 0; width: 100%; height: 100%; object-fit: cover; display: flex;",
                                     "attributes": {
-                                        "src": "static/images/stories/desktop/cwrapArray[mountains,cityscapes,18-days-voyage,architecturals].jpg"
+                                        "src": "cwrapProperty[prefix=./]static/images/stories/desktop/cwrapArray[mountains,cityscapes,18-days-voyage,architecturals].jpg"
                                     }
                                 },
                                 {
