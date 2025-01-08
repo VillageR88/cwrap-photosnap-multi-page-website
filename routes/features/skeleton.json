@@ -63,7 +63,7 @@
         },
         {
           "element": "div",
-          "style": "display: flex; margin: auto 159px;align-items: center; justify-content: space-between; color: white; position: relative;",
+          "style": "display: flex; width: 100%; margin: auto 159px; align-items: center; justify-content: space-between; color: white; position: relative;",
           "children": [
             {
               "element": "h2",
@@ -72,6 +72,10 @@
                 "class": "title"
               },
               "text": "WE’RE IN BETA. GET YOU INVITE TODAY!"
+            },
+            {
+              "element": "cwrap-template",
+              "text": "cwrapTemplate[arrowLink(arrowColor=white,arrowLinkText=GET AN INVITE,underlineAnimation=underline-animation)]"
             }
           ]
         }

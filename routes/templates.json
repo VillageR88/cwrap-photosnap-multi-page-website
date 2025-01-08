@@ -221,11 +221,16 @@
                             },
                             {
                                 "element": "div",
-                                "style": "color: white;",
+                                "style": "color: white; display: flex; flex-direction: column; justify-content: space-between; align-items: end;",
                                 "children": [
                                     {
                                         "element": "cwrap-template",
                                         "text": "cwrapTemplate[arrowLink(arrowColor=white,arrowLinkText=GET AN INVITE,underlineAnimation=underline-animation)]"
+                                    },
+                                    {
+                                        "element": "p",
+                                        "style": "font-size: 15px; margin: 0; opacity: 0.5;",
+                                        "text": "Copyright 2019. All Rights Reserved"
                                     }
                                 ]
                             }
