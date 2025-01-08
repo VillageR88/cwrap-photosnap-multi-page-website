@@ -29,6 +29,11 @@
       "name": "title-plan",
       "type": "class",
       "style": "margin: 0; font-size: 24px; font-weight: bold; line-height: 25px;"
+    },
+    {
+      "name": "title-compare",
+      "type": "class",
+      "style": "color: black; font-weight: bold; font-size: 12px; letter-spacing: 2px; margin: 0;"
     }
   ],
   "element": "cwrap-template",
@@ -195,7 +200,47 @@
         },
         {
           "element": "div",
-          "style": "margin-block: 160px;"
+          "style": "margin-block: 160px; display: flex; flex-direction: column; align-items: center; gap: 56px;",
+          "children": [
+            {
+              "element": "h2",
+              "attributes": {
+                "class": "title"
+              },
+              "text": "COMPARE"
+            },
+            {
+              "element": "div",
+              "style": "display: flex; align-items: start; justify-content: space-between; width: 100%; max-width: 731px; padding-left: 24px; box-sizing: border-box; min-height: 39px; border-bottom: 1px solid black;",
+              "children": [
+                {
+                  "element": "h3",
+                  "attributes": {
+                    "class": "title-compare"
+                  },
+                  "text": "THE FEATURES"
+                },
+                {
+                  "element": "ul",
+                  "style": "display: flex; margin: 0; padding: 0; box-sizing: border-box; list-style: none;",
+                  "blueprint": {
+                    "count": "3",
+                    "element": "li",
+                    "children": [
+                      {
+                        "element": "p",
+                        "attributes": {
+                          "class": "title-compare"
+                        },
+                        "style": "width: 140px; text-align: center;",
+                        "text": "cwrapArray[BASIC,PRO,BUSINESS]"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
