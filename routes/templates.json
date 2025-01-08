@@ -754,8 +754,7 @@
                 ]
             },
             {
-                "element": "cwrap-template",
-                "text": "cwrapTemplate[ulFeatures(prefix=../)]"
+                "element": "cwrap-passover"
             },
             {
                 "element": "div",

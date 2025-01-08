@@ -4,7 +4,13 @@
   "passover": [
     {
       "element": "cwrap-template",
-      "text": "cwrapTemplate[bodyWrapper1]"
+      "text": "cwrapTemplate[bodyWrapper1]",
+      "passover": [
+        {
+          "element": "cwrap-template",
+          "text": "cwrapTemplate[ulFeatures(prefix=../)]"
+        }
+      ]
     }
   ]
 }
