@@ -2,111 +2,74 @@
   "element": "cwrap-template",
   "text": "cwrapTemplate[body]",
   "passover": [
-   
+    {
+      "element": "ul",
+      "extend": [
         {
-          "element": "ul",
-          "extend": [
-            {
-              "extension": " > li:nth-of-type(even)",
-              "style": "flex-direction: row-reverse;"
-            }
-          ],
-          "style": "display: flex; flex-direction: column; width: 100%; margin: 0; padding: 0; list-style: none;",
-          "blueprint": {
-            "count": "3",
-            "element": "li",
-            "style": "display: flex; ",
+          "extension": " > li:nth-of-type(even)",
+          "style": "flex-direction: row-reverse;"
+        }
+      ],
+      "style": "display: flex; flex-direction: column; width: 100%; margin: 0; padding: 0; list-style: none;",
+      "blueprint": {
+        "count": "3",
+        "element": "li",
+        "style": "display: flex; ",
+        "children": [
+          {
+            "element": "div",
+            "style": "background-color: cwrapArray[black,white,white]; max-width: 610px; width: 100%; display:flex; align-items: center; justify-content: center;",
             "children": [
               {
                 "element": "div",
-                "style": "background-color: cwrapArray[black,white,white]; max-width: 610px; width: 100%; display:flex; align-items: center; justify-content: center;",
+                "style": "gap: 48px; max-width: 387px; width: 100%; display: flex; flex-direction: column; color: cwrapArray[white,black,black];",
                 "children": [
                   {
-                    "element": "div",
-                    "style": "gap: 48px; max-width: 387px; width: 100%; display: flex; flex-direction: column; color: cwrapArray[white,black,black];",
+                    "element": "section",
+                    "style": "display: flex; flex-direction: column; gap: 21px;",
                     "children": [
                       {
-                        "element": "section",
-                        "style": "display: flex; flex-direction: column; gap: 21px;",
-                        "children": [
-                          {
-                            "element": "cwrapArray[h1,h2,h2]",
-                            "attributes": {
-                              "class": "title"
-                            },
-                            "text": "cwrapArray[CREATE AND SHARE YOUR PHOTO STORIES.,BEAUTIFUL STORIES EVERY TIME,DESIGNED FOR EVERYONE]"
-                          },
-                          {
-                            "element": "p",
-                            "style": "opacity: 0.6;",
-                            "attributes": {
-                              "class": "description"
-                            },
-                            "text": "cwrapGlobal[cwrapArray[homeDesc1,homeDesc2,homeDesc3]]"
-                          }
-                        ]
+                        "element": "cwrapArray[h1,h2,h2]",
+                        "attributes": {
+                          "class": "title"
+                        },
+                        "text": "cwrapArray[CREATE AND SHARE YOUR PHOTO STORIES.,BEAUTIFUL STORIES EVERY TIME,DESIGNED FOR EVERYONE]"
                       },
                       {
-                        "element": "cwrap-template",
-                        "text": "cwrapTemplate[arrowLink(arrowColor=cwrapArray[white,black,black],arrowLinkText=cwrapArray[GET AN INVITE,VIEW THE STORIES,VIEW THE STORIES],underlineAnimation=underline-animation)]"
+                        "element": "p",
+                        "style": "opacity: 0.6;",
+                        "attributes": {
+                          "class": "description"
+                        },
+                        "text": "cwrapGlobal[cwrapArray[homeDesc1,homeDesc2,homeDesc3]]"
                       }
                     ]
-                  }
-                ]
-              },
-              {
-                "element": "img",
-                "style": "width: 100%; display: flex;",
-                "attributes": {
-                  "src": "static/images/home/desktop/cwrapArray[create-and-share,beautiful-stories,designed-for-everyone].jpg"
-                }
-              }
-            ]
-          }
-        },
-        {
-          "element": "cwrap-template",
-          "text": "cwrapTemplate[gallery]"
-        },
-        {
-          "element": "ul",
-          "style": "gap: 30px; list-style: none; max-width: 1110px; width: 100%; padding: 0; display: flex; margin: 120px auto 120px auto; box-sizing: border-box; justify-content: space-between; align-items: start;",
-          "blueprint": {
-            "count": "3",
-            "element": "li",
-            "style": "gap: cwrapArray[48,66,46]px; max-width: 350px; width: 100%; display: flex; flex-direction: column; align-items: center; margin-top: cwrapArray[cwrapOmit,16px,cwrapOmit]",
-            "children": [
-              {
-                "element": "img",
-                "attributes": {
-                  "src": "static/images/features/desktop/cwrapArray[responsive,no-limit,embed].svg"
-                }
-              },
-              {
-                "element": "section",
-                "style": "display: flex; flex-direction: column; gap: 16px; align-items: center; text-align: center;",
-                "children": [
-                  {
-                    "element": "h2",
-                    "attributes": {
-                      "class": "title-gallery"
-                    },
-                    "text": "cwrapArray[100% Responsive,No Photo Upload Limit,Available to Embed]"
                   },
                   {
-                    "element": "p",
-                    "style": "opacity: 0.6",
-                    "attributes": {
-                      "class": "description"
-                    },
-                    "text": "cwrapArray[No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen cwrapBreak Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go. cwrapBreak Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more.]"
+                    "element": "cwrap-template",
+                    "text": "cwrapTemplate[arrowLink(arrowColor=cwrapArray[white,black,black],arrowLinkText=cwrapArray[GET AN INVITE,VIEW THE STORIES,VIEW THE STORIES],underlineAnimation=underline-animation)]"
                   }
                 ]
               }
             ]
+          },
+          {
+            "element": "img",
+            "style": "width: 100%; display: flex;",
+            "attributes": {
+              "src": "static/images/home/desktop/cwrapArray[create-and-share,beautiful-stories,designed-for-everyone].jpg"
+            }
           }
-        
-      
+        ]
+      }
+    },
+    {
+      "element": "cwrap-template",
+      "text": "cwrapTemplate[gallery]"
+    },
+    {
+      "element": "cwrap-template",
+      "text": "cwrapTemplate[ulFeatures(ulFeaturesCounter=3))]"
     }
   ]
 }
