@@ -704,5 +704,90 @@
                 }
             ]
         }
+    },
+    {
+        "element": "cwrap-fragment",
+        "name": "bodyWrapper1",
+        "children": [
+            {
+                "element": "div",
+                "style": "display: flex; height: 490px;",
+                "children": [
+                    {
+                        "element": "div",
+                        "style": "gap: 106px; max-width: 610px; width: 100%; background-color: black; display: flex; align-items: center; justify-content: start;",
+                        "children": [
+                            {
+                                "element": "div",
+                                "style": "width: 6px; height: 144px; background: linear-gradient(065deg, #FFC593 0%, #BC7198 32%, #5A77FF 100%);"
+                            },
+                            {
+                                "element": "section",
+                                "style": "color: white; display: flex; flex-direction: column; gap: 21px; max-width: 387px; width: 100%;",
+                                "children": [
+                                    {
+                                        "element": "h1",
+                                        "attributes": {
+                                            "class": "title"
+                                        },
+                                        "text": "cwrapGlobal[heroElements.features.title]"
+                                    },
+                                    {
+                                        "element": "p",
+                                        "style": "opacity: 0.6",
+                                        "attributes": {
+                                            "class": "description"
+                                        },
+                                        "text": "cwrapGlobal[heroElements.features.description]"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "element": "img",
+                        "style": "display: flex;",
+                        "attributes": {
+                            "src": "../cwrapGlobal[heroElements.features.image]"
+                        }
+                    }
+                ]
+            },
+            {
+                "element": "cwrap-template",
+                "text": "cwrapTemplate[ulFeatures(prefix=../)]"
+            },
+            {
+                "element": "div",
+                "style": "height: 280px; width: 100%; display: flex; position: relative;",
+                "children": [
+                    {
+                        "element": "img",
+                        "style": "display: flex; position: absolute;",
+                        "attributes": {
+                            "src": "../static/images/shared/desktop/bg-beta.jpg"
+                        }
+                    },
+                    {
+                        "element": "div",
+                        "style": "display: flex; width: 100%; margin: auto 159px; align-items: center; justify-content: space-between; color: white; position: relative;",
+                        "children": [
+                            {
+                                "element": "h2",
+                                "style": "max-width: 400px;",
+                                "attributes": {
+                                    "class": "title"
+                                },
+                                "text": "WE’RE IN BETA. GET YOU INVITE TODAY!"
+                            },
+                            {
+                                "element": "cwrap-template",
+                                "text": "cwrapTemplate[arrowLink(arrowColor=white,arrowLinkText=GET AN INVITE,underlineAnimation=underline-animation)]"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]
