@@ -4,7 +4,7 @@
   "passover": [
     {
       "element": "cwrap-template",
-      "text": "cwrapTemplate[gallery(prefix=../)]"
+      "text": "cwrapTemplate[gallery(prefix=../,galleryCount=5)]"
     }
   ]
 }

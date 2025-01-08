@@ -585,7 +585,7 @@
         "name": "gallery",
         "style": "display: grid; grid-template-columns: repeat(4, 1fr); list-style: none; margin: 0; padding: 0; box-sizing: border-box;",
         "blueprint": {
-            "count": "4",
+            "count": "cwrapProperty[galleryCount=4]",
             "element": "li",
             "children": [
                 {
