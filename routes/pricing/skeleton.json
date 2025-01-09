@@ -242,17 +242,34 @@
             },
             {
               "element": "ul",
-              "style": "width: 100%; max-width: 731px; padding-left: 24px; box-sizing: border-box; margin: 0; list-style: none;",
+              "style": "width: 100%; max-width: 731px; padding: 0; box-sizing: border-box; margin: 0; list-style: none;",
               "blueprint": {
                 "count": "8",
                 "element": "li",
-                "style": "min-height: 65px; display: flex; align-items: center; border-bottom: 1px solid #DFDFDF;",
+                "style": "min-height: 65px; justify-content: space-between; display: flex; align-items: center; border-bottom: 1px solid #DFDFDF;",
                 "children": [
                   {
                     "element": "h3",
+                    "style": "margin-left: 24px",
                     "text": "cwrapArray[UNLIMITED STORY POSTING,UNLIMITED PHOTO UPLOAD,EMBEDDING CUSTOM CONTENT,CUSTOMIZE METADATA,ADVANCED METRICS,PHOTO DOWNLOADS,SEARCH ENGINE INDEXING,CUSTOM ANALYTICS]",
                     "attributes": {
                       "class": "title-compare"
+                    }
+                  },
+                  {
+                    "element": "ul",
+                    "style": "display: flex; gap: 121px; margin: 0 64px 0 0; list-style: none; padding: 0; box-sizing: border-box;",
+                    "blueprint": {
+                      "count": "cwrapArray[3,3,2,2,1,1,1,1],",
+                      "element": "li",
+                      "children": [
+                        {
+                          "element": "img",
+                          "attributes": {
+                            "src": "../static/images/pricing/desktop/check.svg"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
