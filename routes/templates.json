@@ -639,6 +639,13 @@
                                             "style": "display: flex; flex-direction: column; gap: 8px;",
                                             "children": [
                                                 {
+                                                    "element": "p",
+                                                    "attributes": {
+                                                        "class": "author-gallery"
+                                                    },
+                                                    "text": "cwrapGlobal[gallery.cwrapIndex.date]"
+                                                },
+                                                {
                                                     "element": "h2",
                                                     "attributes": {
                                                         "class": "title-gallery"
