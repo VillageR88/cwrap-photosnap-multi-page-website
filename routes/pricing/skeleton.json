@@ -200,7 +200,7 @@
         },
         {
           "element": "div",
-          "style": "margin-block: 160px; display: flex; flex-direction: column; align-items: center; gap: 56px;",
+          "style": "margin-block: 160px; display: flex; flex-direction: column; align-items: center;",
           "children": [
             {
               "element": "h2",
@@ -211,7 +211,7 @@
             },
             {
               "element": "div",
-              "style": "display: flex; align-items: start; justify-content: space-between; width: 100%; max-width: 731px; padding-left: 24px; box-sizing: border-box; min-height: 39px; border-bottom: 1px solid black;",
+              "style": "margin-top: 56px; display: flex; align-items: start; justify-content: space-between; width: 100%; max-width: 731px; padding-left: 24px; box-sizing: border-box; min-height: 39px; border-bottom: 1px solid black;",
               "children": [
                 {
                   "element": "h3",
@@ -228,7 +228,7 @@
                     "element": "li",
                     "children": [
                       {
-                        "element": "p",
+                        "element": "h3",
                         "attributes": {
                           "class": "title-compare"
                         },
@@ -239,6 +239,24 @@
                   }
                 }
               ]
+            },
+            {
+              "element": "ul",
+              "style": "width: 100%; max-width: 731px; padding-left: 24px; box-sizing: border-box; margin: 0; list-style: none;",
+              "blueprint": {
+                "count": "8",
+                "element": "li",
+                "style": "min-height: 65px; display: flex; align-items: center; border-bottom: 1px solid #DFDFDF;",
+                "children": [
+                  {
+                    "element": "h3",
+                    "text": "cwrapArray[UNLIMITED STORY POSTING,UNLIMITED PHOTO UPLOAD,EMBEDDING CUSTOM CONTENT,CUSTOMIZE METADATA,ADVANCED METRICS,PHOTO DOWNLOADS,SEARCH ENGINE INDEXING,CUSTOM ANALYTICS]",
+                    "attributes": {
+                      "class": "title-compare"
+                    }
+                  }
+                ]
+              }
             }
           ]
         }

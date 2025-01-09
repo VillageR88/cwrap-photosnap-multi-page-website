@@ -220,7 +220,7 @@
                                     },
                                     {
                                         "element": "cwrap-template",
-                                        "text": "cwrapTemplate[ulNavigation(ulNavigationAlign=start,ulNavigationColor=white,ulNavigationDirection=column,ulNavigationGap=19px)]"
+                                        "text": "cwrapTemplate[ulNavigation(ulNavigationAlign=start,ulNavigationColor=white,ulNavigationDirection=column,ulNavigationGap=19px,r2=cwrapOmit,r3=cwrapOmit,r4=cwrapOmit)]"
                                     }
                                 ]
                             },

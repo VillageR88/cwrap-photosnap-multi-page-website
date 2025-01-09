@@ -1028,12 +1028,9 @@ function generateCssSelector(
               JSON.stringify(templateElement)
             );
 
-            // Check for noInherit option
-            if (!templatePropsMap.has("noInherit")) {
-              for (const [key, value] of propsMap) {
-                if (!templatePropsMap.has(key)) {
-                  templatePropsMap.set(key, value);
-                }
+            for (const [key, value] of propsMap) {
+              if (!templatePropsMap.has(key)) {
+                templatePropsMap.set(key, value);
               }
             }
 
