@@ -54,7 +54,10 @@ function clearDocumentByOmit(htmlString) {
 
   // Iterate in reverse order and remove elements containing "cwrapOmit"
   for (let i = elements.length - 1; i >= 0; i--) {
-    if (elements[i].textContent.includes("cwrapOmit")) {
+    if (
+      elements[i].textContent.includes("cwrapOmit") ||
+      elements[i].hasAttribute("data-cwrap-omit")
+    ) {
       elements[i].parentNode.removeChild(elements[i]);
     }
   }
@@ -102,6 +105,7 @@ function createElementFromJson(
   if (omit.includes(jsonObjCopy["omit-id"])) {
     jsonObjCopy.text = "cwrapOmit";
   }
+
   let isFragment = false;
   if (jsonObjCopy.element === "cwrap-fragment") isFragment = true;
   if (isFragment) {
@@ -114,7 +118,7 @@ function createElementFromJson(
         properties,
         omit
       );
-      fragment.appendChild(childElement);
+      if (childElement) fragment.appendChild(childElement);
     }
     return fragment;
   }
@@ -122,6 +126,7 @@ function createElementFromJson(
   // Create the element
   const SVG_NAMESPACE = "http://www.w3.org/2000/svg";
   let element;
+
   if (
     jsonObjCopy.element === "svg" ||
     jsonObjCopy.element === "path" ||
@@ -159,6 +164,7 @@ function createElementFromJson(
 
   if (!abandonItem) {
     const originalText = selectedJsonObj.text || jsonObjCopy.text;
+
     element.cwrapText = originalText ?? "";
 
     if (
@@ -259,12 +265,16 @@ function createElementFromJson(
         }
       }
     } else {
+      // //This is newest addition to workaround JSDOM preventing from non semantic text inside img (for example)
+      if (jsonObjCopy?.text?.includes("cwrapOmit")) {
+        element?.setAttribute("data-cwrap-omit", "");
+      }
       element.textContent = originalText;
     }
 
     if (selectedJsonObj.attributes) {
       for (const [key, value] of Object.entries(selectedJsonObj.attributes)) {
-        if (value === "cwrapOmit") break;
+        if (value === "cwrapOmit") continue;
         if (value.includes("cwrapProperty")) {
           const parts = value.split(/(cwrapProperty\[[^\]]+\])/g);
           let finalValue = "";
@@ -289,10 +299,6 @@ function createElementFromJson(
         }
       }
     }
-  }
-
-  if (isInitialLoad && !jsonObjCopy.blueprint) {
-    element.customTag = "cwrapPreloaded";
   }
 
   if (jsonObjCopy.blueprint) {
@@ -344,7 +350,7 @@ function createElementFromJson(
         spanElements[spanIndex].replaceWith(childElement);
         spanIndex++;
       } else if (!childElement.isOmitted) {
-        element.appendChild(childElement);
+        if (childElement) element.appendChild(childElement);
       }
     }
   }
@@ -550,7 +556,7 @@ function processStaticRouteDirectory(routeDir, buildDir, index) {
   let jsonObj = JSON.parse(fs.readFileSync(jsonFile, "utf8"));
   if (jsonObj.routes) {
     if (!isDevelopment) console.log("routeFound");
-    const findCwrapArrayMatches = (str, cwrapMatch) => {
+    const findCwrapRouteMatches = (str, cwrapMatch) => {
       const matches = [];
       let bracketCount = 0;
       let startIndex = -1;
@@ -576,7 +582,7 @@ function processStaticRouteDirectory(routeDir, buildDir, index) {
     };
 
     const jsonString = JSON.stringify(jsonObj);
-    const arrayMatches = findCwrapArrayMatches(jsonString, "cwrapRoutes");
+    const arrayMatches = findCwrapRouteMatches(jsonString, "cwrapRoutes");
     let replacedString = jsonString;
 
     for (const match of arrayMatches) {
@@ -911,7 +917,7 @@ function replacePlaceholdersCwrapArray(jsonObj, index) {
     let startIndex = -1;
 
     for (let i = 0; i < str.length; i++) {
-      if (str.slice(i, i + 10) === cwrapMatch) {
+      if (str.slice(i, i + cwrapMatch.length) === cwrapMatch) {
         if (startIndex === -1) {
           startIndex = i;
         }
@@ -952,8 +958,16 @@ function replacePlaceholdersCwrapArray(jsonObj, index) {
       array[index] !== undefined ? array[index] : ""
     );
   }
-
-  return JSON.parse(replacedString);
+  if (isDevelopment)
+    try {
+      return JSON.parse(replacedString);
+    } catch (error) {
+      console.log("error", arrayMatches);
+      replacedString = replacedString.replace(/cwrapArray/g, "");
+      console.log(replacedString);
+      return replacedString;
+    }
+  else return JSON.parse(replacedString);
 }
 /**
  * Creates cssMap and mediaQueriesMap.
