@@ -2,7 +2,7 @@
     {
         "element": "a",
         "attributes": {
-            "href": "cwrapProperty[prefix=./]home"
+            "href": "cwrapProperty[prefix=./]"
         },
         "name": "logo",
         "children": [
@@ -97,10 +97,15 @@
                         {
                             "extension": ":hover",
                             "style": "opacity: 0.3;"
+                        },
+                        {
+                            "extension": ".current-route",
+                            "style": "transition: 0s; opacity: 0.3;"
                         }
                     ],
                     "attributes": {
-                        "href": "cwrapProperty[prefix=./]cwrapArray[home,stories,features,pricing]"
+                        "class": "cwrapArray[cwrapProperty[r1=cwrapOmit],cwrapProperty[r2=cwrapOmit],cwrapProperty[r3=cwrapOmit],cwrapProperty[r4=cwrapOmit]]",
+                        "href": "cwrapProperty[prefix=./]cwrapArray[,stories,features,pricing]"
                     },
                     "text": "cwrapArray[HOME,STORIES,FEATURES,PRICING]"
                 }

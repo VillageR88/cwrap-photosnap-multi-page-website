@@ -1,6 +1,6 @@
 {
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body(prefix=../)]",
+  "text": "cwrapTemplate[body(prefix=../,r3=current-route)]",
   "passover": [
     {
       "element": "cwrap-template",

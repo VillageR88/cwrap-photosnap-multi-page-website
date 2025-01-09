@@ -37,7 +37,7 @@
     }
   ],
   "element": "cwrap-template",
-  "text": "cwrapTemplate[body(prefix=../)]",
+  "text": "cwrapTemplate[body(prefix=../,r4=current-route)]",
   "passover": [
     {
       "element": "cwrap-template",
