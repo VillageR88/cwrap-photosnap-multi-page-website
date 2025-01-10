@@ -643,7 +643,7 @@
                                                     "attributes": {
                                                         "class": "author-gallery"
                                                     },
-                                                    "text": "cwrapGlobal[gallery.cwrapIndex.date]"
+                                                    "text": "cwrapProperty[galleryDate=cwrapGlobal[gallery.cwrapIndex.date]]"
                                                 },
                                                 {
                                                     "element": "h2",
@@ -742,7 +742,7 @@
                                         "attributes": {
                                             "class": "title"
                                         },
-                                        "text": "cwrapGlobal[heroElements.features.title]"
+                                        "text": "cwrapGlobal[heroElements.cwrapProperty[hero=features].title]"
                                     },
                                     {
                                         "element": "p",
@@ -750,7 +750,7 @@
                                         "attributes": {
                                             "class": "description"
                                         },
-                                        "text": "cwrapGlobal[heroElements.features.description]"
+                                        "text": "cwrapGlobal[heroElements.cwrapProperty[hero=features].description]"
                                     }
                                 ]
                             }
@@ -758,9 +758,9 @@
                     },
                     {
                         "element": "img",
-                        "style": "display: flex;",
+                        "style": "display: flex; width: 100%",
                         "attributes": {
-                            "src": "../cwrapGlobal[heroElements.features.image]"
+                            "src": "../cwrapGlobal[heroElements.cwrapProperty[hero=features].image]"
                         }
                     }
                 ]
@@ -774,7 +774,7 @@
                 "children": [
                     {
                         "element": "img",
-                        "style": "display: flex; position: absolute;",
+                        "style": "display: flex; position: absolute; width: 100%",
                         "attributes": {
                             "src": "../static/images/shared/desktop/bg-beta.jpg"
                         }

@@ -41,7 +41,7 @@
   "passover": [
     {
       "element": "cwrap-template",
-      "text": "cwrapTemplate[bodyWrapper1]",
+      "text": "cwrapTemplate[bodyWrapper1(hero=pricing)]",
       "passover": [
         {
           "element": "form",

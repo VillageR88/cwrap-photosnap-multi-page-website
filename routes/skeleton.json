@@ -65,7 +65,7 @@
     },
     {
       "element": "cwrap-template",
-      "text": "cwrapTemplate[gallery]"
+      "text": "cwrapTemplate[gallery(galleryDate=cwrapOmit)]"
     },
     {
       "element": "cwrap-template",
