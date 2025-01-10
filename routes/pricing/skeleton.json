@@ -101,15 +101,33 @@
             },
             {
               "element": "ul",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 1280px",
+                  "style": "flex-direction: column; padding-inline: 40px;"
+                }
+              ],
               "style": "margin:0; padding: 0; box-sizing: border-box; list-style:none; display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1110px; gap: 30px;",
               "blueprint": {
                 "count": "3",
                 "element": "li",
+                "mediaQueries": [
+                  {
+                    "query": "max-width: 1280px",
+                    "style": "max-width: unset; align-items: start; "
+                  }
+                ],
                 "style": "color: cwrapArray[black,white,black]; padding: 56px 40px 40px 40px; box-sizing: border-box; background-color: cwrapArray[#F5F5F5,black,#F5F5F5]; max-width: 350px; width: 100%; min-height: cwrapArray[407,470,407]px; align-items: center; display: flex; flex-direction: column; text-align: center; justify-content: space-between;",
                 "children": [
                   {
                     "element": "section",
-                    "style": "display: flex; flex-direction: column; align-items:center; gap: 18px;",
+                    "mediaQueries": [
+                      {
+                        "query": "max-width: 1280px",
+                        "style": "text-align: start; align-items: start;"
+                      }
+                    ],
+                    "style": " max-width: 270px; display: flex; flex-direction: column; align-items:center; gap: 18px;",
                     "children": [
                       {
                         "element": "h2",
@@ -190,7 +208,7 @@
                         "style": "background-color: #DFDFDF; color: black;"
                       }
                     ],
-                    "style": "transition: 300ms; font-weight: bold; font-size: 12px; letter-spacing: 2px; cursor: pointer; color: cwrapArray[white,black,white]; background-color: cwrapArray[black,white,black]; width: 100%; min-height: 40px; border:none;",
+                    "style": "max-width: 270px; transition: 300ms; font-weight: bold; font-size: 12px; letter-spacing: 2px; cursor: pointer; color: cwrapArray[white,black,white]; background-color: cwrapArray[black,white,black]; width: 100%; min-height: 40px; border:none;",
                     "text": "PICK PLAN"
                   }
                 ]

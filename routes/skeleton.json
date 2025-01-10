@@ -27,7 +27,7 @@
               },
               {
                 "element": "div",
-                "style": " max-width: 387px; width: 100%; display: flex; flex-direction: column; color: cwrapArray[white,black,black];",
+                "style": "gap: 48px; max-width: 387px; width: 100%; display: flex; flex-direction: column; color: cwrapArray[white,black,black];",
                 "children": [
                   {
                     "element": "section",
