@@ -1,12 +1,13 @@
 {
   "element": "cwrap-template",
   "text": "cwrapTemplate[body]",
+  "omit": "footerBeta",
   "passover": [
     {
       "element": "ul",
       "extend": [
         {
-          "extension": " > li:nth-of-type(even)",
+          "extension": " > li:nth-of-type(even) > div",
           "style": "flex-direction: row-reverse;"
         }
       ],
@@ -14,60 +15,65 @@
       "blueprint": {
         "count": "3",
         "element": "li",
-        "style": "display: flex;",
+        "style": "display: flex; background-color: white;",
         "children": [
           {
             "element": "div",
-            "style": "min-width: 495px; min-height: 650px; position: relative; background-color: cwrapArray[black,white,white]; max-width: 610px; width: 100%; display:flex; align-items: center; justify-content: center;",
+            "style": "display: flex; margin-inline: auto; center; max-width: 1440px; width:100%;",
             "children": [
               {
-                "element": "cwrapArray[div,cwrapOmit,cwrapOmit]",
-                "omit-id": "divOmit",
-                "style": "position: absolute; left: 0; width: 6px; height: 304px; background: linear-gradient(065deg, #FFC593 0%, #BC7198 32%, #5A77FF 100%);"
+                "element": "div",
+                "style": "min-width: 495px; min-height: 650px; position: relative; background-color: cwrapArray[black,white,white]; max-width: 610px; width: 100%; display:flex; align-items: center; justify-content: center;",
+                "children": [
+                  {
+                    "element": "cwrapArray[div,cwrapOmit,cwrapOmit]",
+                    "style": "position: absolute; left: 0; width: 6px; height: 304px; background: linear-gradient(065deg, #FFC593 0%, #BC7198 32%, #5A77FF 100%);"
+                  },
+                  {
+                    "element": "div",
+                    "style": "gap: 48px; max-width: 387px; width: 100%; display: flex; flex-direction: column; color: cwrapArray[white,black,black];",
+                    "children": [
+                      {
+                        "element": "section",
+                        "style": "display: flex; flex-direction: column; gap: 21px;",
+                        "children": [
+                          {
+                            "element": "cwrapArray[h1,h2,h2]",
+                            "attributes": {
+                              "class": "title"
+                            },
+                            "text": "cwrapArray[CREATE AND SHARE YOUR PHOTO STORIES.,BEAUTIFUL STORIES EVERY TIME,DESIGNED FOR EVERYONE]"
+                          },
+                          {
+                            "element": "p",
+                            "style": "opacity: 0.6;",
+                            "attributes": {
+                              "class": "description"
+                            },
+                            "text": "cwrapGlobal[cwrapArray[homeDesc1,homeDesc2,homeDesc3]]"
+                          }
+                        ]
+                      },
+                      {
+                        "element": "cwrap-template",
+                        "text": "cwrapTemplate[arrowLink(arrowColor=cwrapArray[white,black,black],arrowLinkText=cwrapArray[GET AN INVITE,VIEW THE STORIES,VIEW THE STORIES],underlineAnimation=underline-animation)]"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "element": "div",
-                "style": "gap: 48px; max-width: 387px; width: 100%; display: flex; flex-direction: column; color: cwrapArray[white,black,black];",
+                "style": "flex",
                 "children": [
                   {
-                    "element": "section",
-                    "style": "display: flex; flex-direction: column; gap: 21px;",
-                    "children": [
-                      {
-                        "element": "cwrapArray[h1,h2,h2]",
-                        "attributes": {
-                          "class": "title"
-                        },
-                        "text": "cwrapArray[CREATE AND SHARE YOUR PHOTO STORIES.,BEAUTIFUL STORIES EVERY TIME,DESIGNED FOR EVERYONE]"
-                      },
-                      {
-                        "element": "p",
-                        "style": "opacity: 0.6;",
-                        "attributes": {
-                          "class": "description"
-                        },
-                        "text": "cwrapGlobal[cwrapArray[homeDesc1,homeDesc2,homeDesc3]]"
-                      }
-                    ]
-                  },
-                  {
-                    "element": "cwrap-template",
-                    "text": "cwrapTemplate[arrowLink(arrowColor=cwrapArray[white,black,black],arrowLinkText=cwrapArray[GET AN INVITE,VIEW THE STORIES,VIEW THE STORIES],underlineAnimation=underline-animation)]"
+                    "element": "img",
+                    "style": "width: 100%; height: 100%; display: flex; object-fit:cover; object-position: cwrapArray[center,20% 0,center]",
+                    "attributes": {
+                      "src": "static/images/home/desktop/cwrapArray[create-and-share,beautiful-stories,designed-for-everyone].jpg"
+                    }
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "element": "div",
-            "style": "flex",
-            "children": [
-              {
-                "element": "img",
-                "style": "width: 100%; height: 100%; display: flex; object-fit:cover; object-position: cwrapArray[center,20% 0,center]",
-                "attributes": {
-                  "src": "static/images/home/desktop/cwrapArray[create-and-share,beautiful-stories,designed-for-everyone].jpg"
-                }
               }
             ]
           }
