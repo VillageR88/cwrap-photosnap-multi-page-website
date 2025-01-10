@@ -41,7 +41,7 @@
   "passover": [
     {
       "element": "cwrap-template",
-      "text": "cwrapTemplate[bodyWrapper1(hero=pricing)]",
+      "text": "cwrapTemplate[bodyWrapper1(hero=pricing,cwrapHeroPosition=50%)]",
       "passover": [
         {
           "element": "form",
@@ -101,7 +101,7 @@
             },
             {
               "element": "ul",
-              "style": "display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1110px; gap: 30px;",
+              "style": "margin:0; padding: 0; box-sizing: border-box; list-style:none; display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1110px; gap: 30px;",
               "blueprint": {
                 "count": "3",
                 "element": "li",
