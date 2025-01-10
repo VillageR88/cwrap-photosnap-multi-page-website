@@ -130,32 +130,44 @@
     {
         "element": "body",
         "name": "body",
-        "style": "box-sizing: border-box; align-items: center; background-color: white; margin: 0; padding: 0; min-height: 100dvh; display: flex; flex-direction: column;",
+        "style": "box-sizing: border-box; align-items: center; background-color: cwrapProperty[backgroundColor=white]; margin: 0; padding: 0; min-height: 100dvh; display: flex; flex-direction: column;",
         "children": [
             {
                 "element": "nav",
-                "style": "justify-content: space-between; max-width: 1110px; width: 100%; min-height: 72px; display: flex; align-items: center; box-sizing: border-box;",
+                "style": "background-color: white; width: 100%; min-height: 72px; display: flex; align-items: center; box-sizing: border-box;",
                 "children": [
                     {
-                        "element": "cwrap-template",
-                        "text": "cwrapTemplate[logo]"
-                    },
-                    {
-                        "element": "cwrap-template",
-                        "text": "cwrapTemplate[ulNavigation(omit=cwrapOmit)]"
-                    },
-                    {
-                        "element": "cwrap-template",
-                        "text": "cwrapTemplate[aInvite]"
+                        "element": "div",
+                        "style": "display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1110px; padding-inline: 39px; margin-inline: auto;",
+                        "children": [
+                            {
+                                "element": "cwrap-template",
+                                "text": "cwrapTemplate[logo]"
+                            },
+                            {
+                                "element": "cwrap-template",
+                                "text": "cwrapTemplate[ulNavigation(omit=cwrapOmit)]"
+                            },
+                            {
+                                "element": "cwrap-template",
+                                "text": "cwrapTemplate[aInvite]"
+                            }
+                        ]
                     }
                 ]
             },
             {
                 "element": "main",
-                "style": "max-width: 1440px; width: 100%; display: flex; flex-direction: column;",
+                "style": " background-color: white; width: 100%; display: flex; flex-direction: column;",
                 "children": [
                     {
-                        "element": "cwrap-passover"
+                        "element": "div",
+                        "style": " width: 100%;",
+                        "children": [
+                            {
+                                "element": "cwrap-passover"
+                            }
+                        ]
                     }
                 ]
             },
@@ -591,84 +603,90 @@
         ]
     },
     {
-        "element": "ul",
+        "element": "div",
+        "style": "background-color: cwrapProperty[galleryBackground=white];",
         "name": "gallery",
-        "style": "justify-content: center; background-color: black; display: grid; list-style: none; margin: 0; padding: 0; box-sizing: border-box; width: 100%; grid-template-columns: repeat(auto-fit, minmax(0, 360px));",
-        "blueprint": {
-            "count": "cwrapProperty[galleryCount=4]",
-            "element": "li",
-            "style": "min-width: 360px; background-color: white;",
-            "children": [
-                {
-                    "element": "a",
-                    "attributes": {
-                        "href": "#"
-                    },
-                    "style": "transition: 0.3s;; z-index:1; text-decoration: none; max-height: 500px; height: 100%; display: flex; align-items: end; position: relative; cursor: pointer;",
-                    "extend": [
-                        {
-                            "extension": ":hover",
-                            "style": "transform: translateY(-24px)"
-                        },
-                        {
-                            "extension": "::before",
-                            "style": "content: \"\"; position: absolute; left: 0; height: 6px; background: linear-gradient(0.6deg, #FFC593 0%, #BC7198 52%, #5A77FF 100%); width: 0%; bottom: -5px; z-index: -1; transition: width 0.3s ease-in-out, left 0.3s ease-in-out;"
-                        },
-                        {
-                            "extension": ":hover::before",
-                            "style": "width: 100%; left: 0; transform: translateX(0) scale(1,1.05); filter: drop-shadow(0 0 6px cwrapProperty[arrowColor=arrowColor]);"
-                        }
-                    ],
+        "children": [
+            {
+                "element": "ul",
+                "style": "max-width: 1440px; justify-content: center; display: grid; list-style: none; margin: 0 auto; padding: 0; box-sizing: border-box; width: 100%; grid-template-columns: repeat(auto-fit, minmax(0, 360px));",
+                "blueprint": {
+                    "count": "cwrapProperty[galleryCount=4]",
+                    "element": "li",
+                    "style": "min-width: 360px; background-color: white;",
                     "children": [
                         {
-                            "element": "div",
-                            "style": "background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.66) 100%); width: 100%; height: 500px; display: flex;",
-                            "children": [
+                            "element": "a",
+                            "attributes": {
+                                "href": "#"
+                            },
+                            "style": "transition: 0.3s;; z-index:1; text-decoration: none; max-height: 500px; height: 100%; display: flex; align-items: end; position: relative; cursor: pointer;",
+                            "extend": [
                                 {
-                                    "element": "img",
-                                    "style": "position: absolute; z-index: -1; top: 0; width: 100%; height: 100%; object-fit: cover; display: flex;",
-                                    "attributes": {
-                                        "src": "cwrapProperty[prefix=./]cwrapGlobal[gallery.cwrapIndex.image]"
-                                    }
+                                    "extension": ":hover",
+                                    "style": "transform: translateY(-24px)"
                                 },
                                 {
+                                    "extension": "::before",
+                                    "style": "content: \"\"; position: absolute; left: 0; height: 6px; background: linear-gradient(0.6deg, #FFC593 0%, #BC7198 52%, #5A77FF 100%); width: 0%; bottom: -5px; z-index: -1; transition: width 0.3s ease-in-out, left 0.3s ease-in-out;"
+                                },
+                                {
+                                    "extension": ":hover::before",
+                                    "style": "width: 100%; left: 0; transform: translateX(0) scale(1,1.05); filter: drop-shadow(0 0 6px cwrapProperty[arrowColor=arrowColor]);"
+                                }
+                            ],
+                            "children": [
+                                {
                                     "element": "div",
-                                    "style": "max-width: 280px; width: 100%; min-height: 99px; margin: auto auto 40px auto; color: white;",
+                                    "style": "background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.66) 100%); width: 100%; height: 500px; display: flex;",
                                     "children": [
                                         {
-                                            "element": "section",
-                                            "style": "display: flex; flex-direction: column; gap: 8px;",
-                                            "children": [
-                                                {
-                                                    "element": "p",
-                                                    "attributes": {
-                                                        "class": "author-gallery"
-                                                    },
-                                                    "text": "cwrapProperty[galleryDate=cwrapGlobal[gallery.cwrapIndex.date]]"
-                                                },
-                                                {
-                                                    "element": "h2",
-                                                    "attributes": {
-                                                        "class": "title-gallery"
-                                                    },
-                                                    "text": "cwrapGlobal[gallery.cwrapIndex.title]"
-                                                },
-                                                {
-                                                    "element": "p",
-                                                    "attributes": {
-                                                        "class": "author-gallery"
-                                                    },
-                                                    "text": "cwrapGlobal[gallery.cwrapIndex.author]"
-                                                }
-                                            ]
+                                            "element": "img",
+                                            "style": "position: absolute; z-index: -1; top: 0; width: 100%; height: 100%; object-fit: cover; display: flex;",
+                                            "attributes": {
+                                                "src": "cwrapProperty[prefix=./]cwrapGlobal[gallery.cwrapIndex.image]"
+                                            }
                                         },
                                         {
                                             "element": "div",
-                                            "style": "border-bottom: 1px solid #FFFFFF; opacity: 0.25; width: 100%; margin-block: 16px 20px;"
-                                        },
-                                        {
-                                            "element": "cwrap-template",
-                                            "text": "cwrapTemplate[arrowLinkImitation(arrowEvents=none,arrowColor=white,arrowLinkText=READ STORY,arrowJustify=space-between,arrowJustDiv=span)]"
+                                            "style": "max-width: 280px; width: 100%; min-height: 99px; margin: auto auto 40px auto; color: white;",
+                                            "children": [
+                                                {
+                                                    "element": "section",
+                                                    "style": "display: flex; flex-direction: column; gap: 8px;",
+                                                    "children": [
+                                                        {
+                                                            "element": "p",
+                                                            "attributes": {
+                                                                "class": "author-gallery"
+                                                            },
+                                                            "text": "cwrapProperty[galleryDate=cwrapGlobal[gallery.cwrapIndex.date]]"
+                                                        },
+                                                        {
+                                                            "element": "h2",
+                                                            "attributes": {
+                                                                "class": "title-gallery"
+                                                            },
+                                                            "text": "cwrapGlobal[gallery.cwrapIndex.title]"
+                                                        },
+                                                        {
+                                                            "element": "p",
+                                                            "attributes": {
+                                                                "class": "author-gallery"
+                                                            },
+                                                            "text": "cwrapGlobal[gallery.cwrapIndex.author]"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "element": "div",
+                                                    "style": "border-bottom: 1px solid #FFFFFF; opacity: 0.25; width: 100%; margin-block: 16px 20px;"
+                                                },
+                                                {
+                                                    "element": "cwrap-template",
+                                                    "text": "cwrapTemplate[arrowLinkImitation(arrowEvents=none,arrowColor=white,arrowLinkText=READ STORY,arrowJustify=space-between,arrowJustDiv=span)]"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -676,13 +694,13 @@
                         }
                     ]
                 }
-            ]
-        }
+            }
+        ]
     },
     {
         "element": "ul",
         "name": "ulFeatures",
-        "style": "gap: 120px 30px; list-style: none; max-width: calc (1110px + 38px * 2); width: 100%; padding: 0; display: flex; flex-wrap: wrap; margin: 120px auto 120px auto; box-sizing: border-box; justify-content: center; align-items: start; padding-inline: 38px;",
+        "style": "gap: 120px 30px; list-style: none; max-width: calc(1110px + 38px * 2); width: 100%; padding: 0; display: flex; flex-wrap: wrap; margin: 120px auto 120px auto; box-sizing: border-box; justify-content: center; align-items: start; padding-inline: 38px;",
         "blueprint": {
             "count": "cwrapProperty[ulFeaturesCounter=6]",
             "element": "li",
@@ -724,7 +742,7 @@
         "children": [
             {
                 "element": "div",
-                "style": "display: flex; height: 490px;",
+                "style": "display: flex; height: 490px; margin-inline: auto; max-width: 1440px; width: 100%;",
                 "children": [
                     {
                         "element": "div",
@@ -777,7 +795,7 @@
             },
             {
                 "element": "div",
-                "style": "height: 280px; width: 100%; display: flex; position: relative;",
+                "style": "height: 280px; width: 100%; display: flex; position: relative ; ",
                 "children": [
                     {
                         "element": "img",
