@@ -83,6 +83,16 @@
     {
         "element": "ul",
         "name": "ulNavigation",
+        "mediaQueries": [
+            {
+                "query": "max-width: 840px",
+                "style": "cwrapProperty[cwrapFooter840=cwrapOmit]; display: cwrapProperty[omitMobile=cwrapOmit]"
+            },
+            {
+                "query": "max-width: 768px",
+                "style": "cwrapProperty[cwrapFooter768=cwrapOmit] flex-direction: column; align-items: center;"
+            }
+        ],
         "style": "display: flex; justify-content: space-between; flex-direction: cwrapProperty[ulNavigationDirection=cwrapOmit]; align-items: cwrapProperty[ulNavigationAlign=center]; list-style: none; padding: 0; margin: 0; box-sizing: border-box; gap: cwrapProperty[ulNavigationGap=37px];",
         "blueprint": {
             "count": "4",
@@ -125,6 +135,12 @@
                 "style": "background-color: #DFDFDF; color: black;"
             }
         ],
+        "mediaQueries": [
+            {
+                "query": "max-width: 840px",
+                "style": "cwrapProperty[desktopInvite=cwrapOmit]"
+            }
+        ],
         "style": "transition: 300ms; text-decoration: none; font-size: 12px; font-weight: bold; letter-spacing: 2px; max-width: 158px; width: 100%; min-height: 40px; background-color: #000000; color: white; display: flex; align-items: center; justify-content: center;"
     },
     {
@@ -138,6 +154,12 @@
                 "children": [
                     {
                         "element": "div",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 840px",
+                                "style": "padding-inline: 24px;"
+                            }
+                        ],
                         "style": "display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1110px; padding-inline: 39px; margin-inline: auto;",
                         "children": [
                             {
@@ -146,11 +168,11 @@
                             },
                             {
                                 "element": "cwrap-template",
-                                "text": "cwrapTemplate[ulNavigation(omit=cwrapOmit)]"
+                                "text": "cwrapTemplate[ulNavigation(omit=cwrapOmit,omitMobile=none;)]"
                             },
                             {
                                 "element": "cwrap-template",
-                                "text": "cwrapTemplate[aInvite]"
+                                "text": "cwrapTemplate[aInvite(desktopInvite=display: none;)]"
                             }
                         ]
                     }
@@ -177,11 +199,11 @@
                 "children": [
                     {
                         "element": "div",
-                        "omit-id":"footerBeta",
+                        "omit-id": "footerBeta",
                         "children": [
                             {
                                 "element": "div",
-                                "style": "height: 280px; width: 100%; display: flex; position: relative ; ",
+                                "style": "height: 280px; width: 100%; display: flex; position: relative;",
                                 "children": [
                                     {
                                         "element": "img",
@@ -192,23 +214,41 @@
                                     },
                                     {
                                         "element": "div",
-                                        "style": "max-width: 1110px; display: flex; position: relative; width: 100%; margin-inline: auto; align-items: center; justify-content: space-between; color: white; position: relative;",
+                                        "style": "max-width: 1440px; width: 100%; position: relative; margin-inline: auto; align-items: center; display: flex",
                                         "children": [
                                             {
                                                 "element": "div",
-                                                "style": "position: absolute; width: 6px; height: 280px; background: linear-gradient(065deg, #FFC593 0%, #BC7198 32%, #5A77FF 100%);"
+                                                "mediaQueries": [
+                                                    {
+                                                        "query": "max-width: 768px",
+                                                        "style": "top: 0; width: 128px; height: 6px; left: 65px;"
+                                                    }
+                                                ],
+                                                "style": "position: absolute; left:0; width: 6px; height: 280px; background: linear-gradient(065deg, #FFC593 0%, #BC7198 32%, #5A77FF 100%); "
                                             },
                                             {
-                                                "element": "h2",
-                                                "style": "max-width: 400px; margin-left: 159px;",
-                                                "attributes": {
-                                                    "class": "title"
-                                                },
-                                                "text": "WE’RE IN BETA. GET YOUR INVITE TODAY!"
-                                            },
-                                            {
-                                                "element": "cwrap-template",
-                                                "text": "cwrapTemplate[arrowLink(arrowColor=white,arrowLinkText=GET AN INVITE,underlineAnimation=underline-animation)]"
+                                                "mediaQueries": [
+                                                    {
+                                                        "query": "max-width: 768px",
+                                                        "style": "padding-inline: 33px; flex-direction: column; justify-content: center; align-items: start; gap: 24px;"
+                                                    }
+                                                ],
+                                                "style": "display: flex; padding-inline: 65px; max-width: 1110px; position: relative; width: 100%; margin-inline: auto; align-items: center; justify-content: space-between; color: white; position: relative; ",
+                                                "element": "div",
+                                                "children": [
+                                                    {
+                                                        "element": "h2",
+                                                        "style": "max-width: 400px; ",
+                                                        "attributes": {
+                                                            "class": "title"
+                                                        },
+                                                        "text": "WE’RE IN BETA. GET YOUR INVITE TODAY!"
+                                                    },
+                                                    {
+                                                        "element": "cwrap-template",
+                                                        "text": "cwrapTemplate[arrowLink(footerArrow840=cwrapOmit,arrowColor=white,arrowLinkText=GET AN INVITE,underlineAnimation=underline-animation)]"
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
@@ -218,18 +258,42 @@
                     },
                     {
                         "element": "div",
-                        "style": " background-color: black; width: 100%; box-sizing: border-box; display: flex; justify-content: space-between;",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 768px",
+                                "style": "min-height: 539px;"
+                            }
+                        ],
+                        "style": "background-color: black; width: 100%; box-sizing: border-box; display: flex; justify-content: space-between;",
                         "children": [
                             {
                                 "element": "div",
-                                "style": "max-width: 1110px; padding-block: 64px; box-sizing: border-box; margin-inline: auto; width: 100%; display: flex; justify-content: space-between;",
+                                "mediaQueries": [
+                                    {
+                                        "query": "max-width: 768px",
+                                        "style": "flex-direction: column; align-items: center; padding-inline: 33px;"
+                                    }
+                                ],
+                                "style": "max-width: 1110px; padding-inline: 69px; padding-block: 64px; margin-inline: auto; width: 100%; display: flex; justify-content: space-between;",
                                 "children": [
                                     {
                                         "element": "div",
+                                        "mediaQueries": [
+                                            {
+                                                "query": "max-width: 768px",
+                                                "style": "flex-direction: column; gap: 49px; align-items: center;"
+                                            }
+                                        ],
                                         "style": "display: flex; gap: 109px;",
                                         "children": [
                                             {
                                                 "element": "div",
+                                                "mediaQueries": [
+                                                    {
+                                                        "query": "max-width: 768px",
+                                                        "style": "min-height: unset; gap: 32px;"
+                                                    }
+                                                ],
                                                 "style": "display: flex; height: 100%; min-height: 122px; flex-direction: column; gap: 8px; justify-content: space-between;",
                                                 "children": [
                                                     {
@@ -238,6 +302,12 @@
                                                     },
                                                     {
                                                         "element": "ul",
+                                                        "mediaQueries": [
+                                                            {
+                                                                "query": "max-width: 768px",
+                                                                "style": "justify-content: center;"
+                                                            }
+                                                        ],
                                                         "style": "display: flex; align-items: center; list-style: none; padding: 0; margin: 0; box-sizing: border-box; gap: 13.3px;",
                                                         "blueprint": {
                                                             "count": "5",
@@ -277,12 +347,18 @@
                                             },
                                             {
                                                 "element": "cwrap-template",
-                                                "text": "cwrapTemplate[ulNavigation(ulNavigationAlign=start,ulNavigationColor=white,ulNavigationDirection=column,ulNavigationGap=19px,r2=cwrapOmit,r3=cwrapOmit,r4=cwrapOmit)]"
+                                                "text": "cwrapTemplate[ulNavigation(cwrapFooter768=position:relative; margin-top: unset;, cwrapFooter840=flex-direction: row; position: absolute; margin-top: 48px;,ulNavigationAlign=start,ulNavigationColor=white,ulNavigationDirection=column,ulNavigationGap=19px,r2=cwrapOmit,r3=cwrapOmit,r4=cwrapOmit)]"
                                             }
                                         ]
                                     },
                                     {
                                         "element": "div",
+                                        "mediaQueries": [
+                                            {
+                                                "query": "max-width: 768px",
+                                                "style": "gap: 34px; align-items: center;"
+                                            }
+                                        ],
                                         "style": "color: white; display: flex; flex-direction: column; justify-content: space-between; align-items: end;",
                                         "children": [
                                             {
@@ -614,6 +690,12 @@
                 "style": "width: 100%; left: 0; transform: translateX(0) scale(0.98,1.05); filter: drop-shadow(0 0 6px cwrapProperty[arrowColor=arrowColor]);"
             }
         ],
+        "mediaQueries": [
+            {
+                "query": "max-width: 840px",
+                "style": "cwrapProperty[footerArrow840=cwrapOmit]"
+            }
+        ],
         "style": "display: flex; gap: 17px; align-items: center; text-decoration: unset; color: unset; justify-content: cwrapProperty[arrowJustify=cwrapOmit]; pointer-events: cwrapProperty[arrowEvents=cwrapOmit];",
         "children": [
             {
@@ -789,20 +871,44 @@
         "children": [
             {
                 "element": "div",
-                "style": "display: flex; height: 490px; margin-inline: auto; max-width: 1440px; width: 100%;",
+                "mediaQueries": [
+                    {
+                        "query": "max-width: 840px",
+                        "style": "flex-direction: column-reverse; height: unset;"
+                    }
+                ],
+                "style": "display: flex; position: relative; height: 490px; margin-inline: auto; max-width: 1440px; width: 100%;",
                 "children": [
                     {
                         "element": "div",
-                        "style": "max-width: 610px; min-width: 495px; width: 100%; background-color: black; display: flex; align-items: center; justify-content: start;",
+                        "mediaQueries": [
+                            {
+                                "query": "max-width: 840px",
+                                "style": "max-width: unset; min-width: unset; padding-block: 72px; padding-inline: 29px; position: relative; box-sizing: border-box;"
+                            }
+                        ],
+                        "style": "max-width: 610px;  min-width: 495px; width: 100%; background-color: black; display: flex; align-items: center; justify-content: start;",
                         "children": [
                             {
-                                "element": "div",
-                                "style": "width: 6px; position: absolute; height: 144px; background: linear-gradient(065deg, #FFC593 0%, #BC7198 32%, #5A77FF 100%); "
-                            },
-                            {
                                 "element": "section",
+                                "mediaQueries": [
+                                    {
+                                        "query": "max-width: 840px",
+                                        "style": "max-width: unset;"
+                                    }
+                                ],
                                 "style": "margin-inline: auto; color: white; display: flex; flex-direction: column; gap: 21px; max-width: 387px; width: 100%;",
                                 "children": [
+                                    {
+                                        "element": "div",
+                                        "mediaQueries": [
+                                            {
+                                                "query": "max-width: 840px",
+                                                "style": "height: 6px; width: 128px; top: 0; left: unset;"
+                                            }
+                                        ],
+                                        "style": "width: 6px; left: 0; position: absolute; height: 144px; background: linear-gradient(065deg, #FFC593 0%, #BC7198 32%, #5A77FF 100%); "
+                                    },
                                     {
                                         "element": "h1",
                                         "attributes": {

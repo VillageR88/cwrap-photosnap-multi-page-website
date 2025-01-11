@@ -19,24 +19,42 @@
         "children": [
           {
             "element": "div",
+            "mediaQueries": [
+              {
+                "query": "max-width: 840px",
+                "style": "flex-direction: column-reverse; max-width: unset;"
+              }
+            ],
             "style": "display: flex; margin-inline: auto; center; max-width: 1440px; width:100%;",
             "children": [
               {
                 "element": "div",
-                "style": "min-width: 495px; min-height: 650px; position: relative; background-color: cwrapArray[black,white,white]; max-width: 610px; width: 100%; display:flex; align-items: center; justify-content: center;",
+                "mediaQueries": [
+                  {
+                    "query": "max-width: 840px",
+                    "style": "max-width: unset; min-height: unset; min-width: unset; padding-block: 72px; padding-inline: 24px; box-sizing: border-box;"
+                  }
+                ],
+                "style": "min-width: 495px; min-height: 650px; position: relative; background-color: cwrapArray[black,white,white]; max-width: 610px; width: 100%; display:flex; align-items: center; ",
                 "children": [
                   {
-                    "element": "cwrapArray[div,cwrapOmit,cwrapOmit]",
-                    "style": "position: absolute; left: 0; width: 6px; height: 304px; background: linear-gradient(065deg, #FFC593 0%, #BC7198 32%, #5A77FF 100%);"
-                  },
-                  {
                     "element": "div",
-                    "style": "gap: 48px; max-width: 387px; width: 100%; display: flex; flex-direction: column; color: cwrapArray[white,black,black];",
+                    "style": "gap: 48px;  margin-inline: auto; max-width: 387px; width: 100%; display: flex; flex-direction: column; color: cwrapArray[white,black,black];",
                     "children": [
                       {
                         "element": "section",
                         "style": "display: flex; flex-direction: column; gap: 21px;",
                         "children": [
+                          {
+                            "element": "cwrapArray[div,cwrapOmit,cwrapOmit]",
+                            "mediaQueries": [
+                              {
+                                "query": "max-width: 840px",
+                                "style": "top: 0; left: unset; height: 6px; width: 128px;"
+                              }
+                            ],
+                            "style": "width: 6px; left: 0; position: absolute; height: 304px; background: linear-gradient(065deg, #FFC593 0%, #BC7198 32%, #5A77FF 100%);"
+                          },
                           {
                             "element": "cwrapArray[h1,h2,h2]",
                             "attributes": {

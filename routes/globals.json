@@ -40,6 +40,12 @@
         {
             "name": "title",
             "type": "class",
+            "mediaQueries": [
+                {
+                    "query": "max-width: 768px",
+                    "style": "font-size: 32px; letter-spacing: 3.33px;"
+                }
+            ],
             "style": "font-size: 40px; line-height: 48px; margin: 0; letter-spacing: 4.17px; font-weight: bold;"
         },
         {
@@ -203,6 +209,7 @@
                 "description": "Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos.",
                 "image": "static/images/pricing/desktop/hero.jpg"
             }
-        }
+        },
+        "allFeatures": "cwrapArray[BASIC,PRO,BUSINESS]"
     }
 }

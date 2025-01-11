@@ -48,7 +48,7 @@
           "attributes": {
             "id": "pricing-form"
           },
-          "style": "margin-top: 120px; display: flex; flex-direction: column; align-items: center; gap: 48px;",
+          "style": "padding-inline: 29px; margin-top: 120px; display: flex; flex-direction: column; align-items: center; gap: 48px;",
           "children": [
             {
               "element": "div",
@@ -104,7 +104,7 @@
               "mediaQueries": [
                 {
                   "query": "max-width: 1280px",
-                  "style": "flex-direction: column; padding-inline: 40px;"
+                  "style": "flex-direction: column; padding-inline: 40px; max-width: 689px; margin:0; padding: 0; list-style: none;"
                 }
               ],
               "style": "margin:0; padding: 0; box-sizing: border-box; list-style:none; display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1110px; gap: 30px;",
@@ -114,10 +114,14 @@
                 "mediaQueries": [
                   {
                     "query": "max-width: 1280px",
-                    "style": "max-width: unset; align-items: start; "
+                    "style": "max-width: unset; align-items: start; min-height: 270px;"
+                  },
+                  {
+                    "query": "max-width: 840px",
+                    "style": "text-align: center; align-items: center; gap: 40px; "
                   }
                 ],
-                "style": "color: cwrapArray[black,white,black]; padding: 56px 40px 40px 40px; box-sizing: border-box; background-color: cwrapArray[#F5F5F5,black,#F5F5F5]; max-width: 350px; width: 100%; min-height: cwrapArray[407,470,407]px; align-items: center; display: flex; flex-direction: column; text-align: center; justify-content: space-between;",
+                "style": "position: relative; color: cwrapArray[black,white,black]; padding: 56px 40px 40px 40px; box-sizing: border-box; background-color: cwrapArray[#F5F5F5,black,#F5F5F5]; max-width: 350px; width: 100%; min-height: cwrapArray[407,470,407]px; align-items: center; display: flex; flex-direction: column; text-align: center; justify-content: space-between;",
                 "children": [
                   {
                     "element": "section",
@@ -125,6 +129,10 @@
                       {
                         "query": "max-width: 1280px",
                         "style": "text-align: start; align-items: start;"
+                      },
+                      {
+                        "query": "max-width: 840px",
+                        "style": "text-align: center; align-items: center;"
                       }
                     ],
                     "style": " max-width: 270px; display: flex; flex-direction: column; align-items:center; gap: 18px;",
@@ -147,10 +155,30 @@
                     ]
                   },
                   {
+                    "mediaQueries": [
+                      {
+                        "query": "max-width: 1280px",
+                        "style": "position: absolute; right: 48px;"
+                      },
+                      {
+                        "query": "max-width: 840px",
+                        "style": "position: relative; right: unset;"
+                      }
+                    ],
                     "element": "div",
                     "children": [
                       {
                         "element": "p",
+                        "mediaQueries": [
+                          {
+                            "query": "max-width: 1280px",
+                            "style": "justify-content: end;"
+                          },
+                          {
+                            "query": "max-width: 840px",
+                            "style": "justify-content: center;"
+                          }
+                        ],
                         "style": "display: flex; visibility: hidden; align-items: center; justify-content: center; margin: 0; font-size: 40px; font-weight: bold; line-height: 48px; letter-spacing: 4.17px;",
                         "text": "placeholder",
                         "children": [
@@ -174,6 +202,16 @@
                       },
                       {
                         "element": "p",
+                        "mediaQueries": [
+                          {
+                            "query": "max-width: 1280px",
+                            "style": "justify-content: end;"
+                          },
+                          {
+                            "query": "max-width: 840px",
+                            "style": "justify-content: center;"
+                          }
+                        ],
                         "style": "display: flex; visibility: hidden; align-items: center; text-align-center; justify-content: center; position: relative; width: 100%;",
                         "attributes": {
                           "class": "description"
@@ -218,7 +256,17 @@
         },
         {
           "element": "div",
-          "style": "margin-block: 160px; display: flex; flex-direction: column; align-items: center;",
+          "mediaQueries": [
+            {
+              "query": "max-width: 1280px",
+              "style": "max-width: 689px;"
+            },
+            {
+              "query": "max-width: 768px",
+              "style": "padding-inline: 29px;"
+            }
+          ],
+          "style": "margin-block: 160px; margin-inline: auto; display: flex; flex-direction: column; align-items: center;",
           "children": [
             {
               "element": "h2",
@@ -229,6 +277,12 @@
             },
             {
               "element": "div",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 768px",
+                  "style": "padding-left: unset;"
+                }
+              ],
               "style": "margin-top: 56px; display: flex; align-items: start; justify-content: space-between; width: 100%; max-width: 731px; padding-left: 24px; box-sizing: border-box; min-height: 39px; border-bottom: 1px solid black;",
               "children": [
                 {
@@ -240,6 +294,12 @@
                 },
                 {
                   "element": "ul",
+                  "mediaQueries": [
+                    {
+                      "query": "max-width: 768px",
+                      "style": "display: none;"
+                    }
+                  ],
                   "style": "display: flex; margin: 0; padding: 0; box-sizing: border-box; list-style: none;",
                   "blueprint": {
                     "count": "3",
@@ -264,10 +324,22 @@
               "blueprint": {
                 "count": "8",
                 "element": "li",
+                "mediaQueries": [
+                  {
+                    "query": "max-width: 768px",
+                    "style": "gap: 17px; flex-direction: column; min-height: 65px; padding-block: 23px; align-items: start;"
+                  }
+                ],
                 "style": "min-height: 65px; justify-content: space-between; display: flex; align-items: center; border-bottom: 1px solid #DFDFDF;",
                 "children": [
                   {
                     "element": "h3",
+                    "mediaQueries": [
+                      {
+                        "query": "max-width: 768px",
+                        "style": "margin-left: 0;"
+                      }
+                    ],
                     "style": "margin-left: 24px",
                     "text": "cwrapArray[UNLIMITED STORY POSTING,UNLIMITED PHOTO UPLOAD,EMBEDDING CUSTOM CONTENT,CUSTOMIZE METADATA,ADVANCED METRICS,PHOTO DOWNLOADS,SEARCH ENGINE INDEXING,CUSTOM ANALYTICS]",
                     "attributes": {
@@ -276,13 +348,32 @@
                   },
                   {
                     "element": "ul",
+                    "mediaQueries": [
+                      {
+                        "query": "max-width: 768px",
+                        "style": "gap 80px;  justify-content: space-between; width: 80%; gap: unset;"
+                      }
+                    ],
                     "style": "display: flex; gap: 121px; margin: 0 64px 0 0; list-style: none; padding: 0; box-sizing: border-box;",
                     "blueprint": {
-                      "count": "cwrapArray[3,3,2,2,1,1,1,1],",
+                      "count": "3",
                       "element": "li",
+                      "style": "display: flex; flex-direction: column; align-items: start; gap: 8px;",
                       "children": [
                         {
+                          "element": "span",
+                          "mediaQueries": [
+                            {
+                              "query": "max-width: 768px",
+                              "style": "display: unset;"
+                            }
+                          ],
+                          "style": "display: none; color: black; opacity: 0.5; font-weight: bold; font-size: 10px; letter-spacing: 1.67px;",
+                          "text": "cwrapArray[cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures]]"
+                        },
+                        {
                           "element": "img",
+                          "text": "cwrapArray[cwrapBreak cwrapBreak cwrapArray[cwrapOmit] cwrapBreak cwrapArray[cwrapOmit] cwrapBreak cwrapArray[cwrapOmit,cwrapOmit] cwrapBreak cwrapArray[cwrapOmit,cwrapOmit] cwrapBreak cwrapArray[cwrapOmit,cwrapOmit] cwrapBreak cwrapArray[cwrapOmit,cwrapOmit]]",
                           "attributes": {
                             "src": "../static/images/pricing/desktop/check.svg"
                           }
