@@ -18,17 +18,38 @@
           "style": "height: 650px; margin-inline: auto; max-width: 1440px; width: 100%; position: relative; display: flex; align-items: center; ",
           "children": [
             {
-              "element": "img",
               "mediaQueries": [
                 {
                   "query": "max-width: 840px",
                   "style": "position: relative;"
                 }
               ],
+              "element": "picture",
               "style": "position: absolute; display: flex; width: 100%; height: 100%; object-fit: cover;",
-              "attributes": {
-                "src": "../static/images/stories/desktop/moon-of-appalacia.jpg"
-              }
+              "children": [
+                {
+                  "element": "source",
+                  "attributes": {
+                    "media": "(max-width: 840px)",
+                    "srcset": "../static/images/stories/tablet/moon-of-appalacia.jpg"
+                  }
+                },
+                {
+                  "element": "source",
+                  "attributes": {
+                    "media": "(max-width: 640px)",
+                    "srcset": "../static/images/stories/mobile/moon-of-appalacia.jpg"
+                  }
+                },
+                {
+                  "element": "img",
+                  "style": "width: 100%; object-fit: cover;",
+                  "attributes": {
+                    "alt": "Moon of Appalachia",
+                    "src": "../static/images/stories/desktop/moon-of-appalacia.jpg"
+                  }
+                }
+              ]
             },
             {
               "element": "div",

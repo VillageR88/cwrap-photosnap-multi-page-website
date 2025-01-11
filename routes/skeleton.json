@@ -25,7 +25,7 @@
                 "style": "flex-direction: column-reverse; max-width: unset;"
               }
             ],
-            "style": "display: flex; margin-inline: auto; center; max-width: 1440px; width:100%;",
+            "style": "display: flex; margin-inline: auto; max-width: 1440px; width:100%;",
             "children": [
               {
                 "element": "div",
@@ -82,14 +82,26 @@
               },
               {
                 "element": "div",
-                "style": "flex",
                 "children": [
                   {
-                    "element": "img",
-                    "style": "width: 100%; height: 100%; display: flex; object-fit:cover; object-position: cwrapArray[center,20% 0,center]",
-                    "attributes": {
-                      "src": "static/images/home/desktop/cwrapArray[create-and-share,beautiful-stories,designed-for-everyone].jpg"
-                    }
+                    "element": "picture",
+                    "children": [
+                      {
+                        "element": "source",
+                        "attributes": {
+                          "media": "(max-width: 480px)",
+                          "srcset": "static/images/home/mobile/cwrapArray[create-and-share,beautiful-stories,designed-for-everyone].jpg"
+                        }
+                      },
+                      {
+                        "element": "img",
+                        "style": "width: 100%; height: 100%; display: flex; object-fit:cover; object-position: cwrapArray[center,20% 0,center]",
+                        "attributes": {
+                          "alt": "cwrapArray[Create and Share,Beautiful Stories,Designed for Everyone]",
+                          "src": "static/images/home/desktop/cwrapArray[create-and-share,beautiful-stories,designed-for-everyone].jpg"
+                        }
+                      }
+                    ]
                   }
                 ]
               }

@@ -23,7 +23,7 @@
     {
       "name": "payment-type-span",
       "type": "class",
-      "style": "font-weight: bold; font-size: 18px; line-height: 25px; color: black; opacity: 0.5; transition: opacity 300ms;"
+      "style": "font-weight: bold; font-size: 18px; line-height: 25px; color: black; opacity: 0.55; transition: opacity 300ms;"
     },
     {
       "name": "title-plan",
@@ -48,6 +48,12 @@
           "attributes": {
             "id": "pricing-form"
           },
+          "mediaQueries": [
+            {
+              "query": "max-width: 840px",
+              "style": "margin-top: 64px;"
+            }
+          ],
           "style": "padding-inline: 29px; margin-top: 120px; display: flex; flex-direction: column; align-items: center; gap: 48px;",
           "children": [
             {
@@ -66,6 +72,9 @@
                 },
                 {
                   "element": "label",
+                  "attributes": {
+                    "for": "payment-type-input"
+                  },
                   "extend": [
                     {
                       "extension": ":has(input:checked)",
@@ -78,6 +87,7 @@
                       "element": "input",
                       "attributes": {
                         "id": "payment-type-input",
+                        "name": "payment-type-input",
                         "type": "checkbox"
                       },
                       "style": "cursor: pointer; appearance: none; padding: 0; margin: 0; background-color: black; width: 24px; height: 24px; border-radius: 50%; box-sizing: border-box; transition: transform 300ms, background-color 300ms;",
@@ -212,7 +222,7 @@
                             "style": "justify-content: center;"
                           }
                         ],
-                        "style": "display: flex; visibility: hidden; align-items: center; text-align-center; justify-content: center; position: relative; width: 100%;",
+                        "style": "display: flex; visibility: hidden; align-items: center; justify-content: center; position: relative; width: 100%;",
                         "attributes": {
                           "class": "description"
                         },
@@ -262,6 +272,10 @@
               "style": "max-width: 689px;"
             },
             {
+              "query": "max-width: 840px",
+              "style": "margin-block: 32px 64px;"
+            },
+            {
               "query": "max-width: 768px",
               "style": "padding-inline: 29px;"
             }
@@ -270,6 +284,12 @@
           "children": [
             {
               "element": "h2",
+              "mediaQueries": [
+                {
+                  "query": "max-width: 840px",
+                  "style": "display:none;"
+                }
+              ],
               "attributes": {
                 "class": "title"
               },
@@ -351,7 +371,7 @@
                     "mediaQueries": [
                       {
                         "query": "max-width: 768px",
-                        "style": "gap 80px;  justify-content: space-between; width: 80%; gap: unset;"
+                        "style": "justify-content: space-between; width: 80%; gap: unset;"
                       }
                     ],
                     "style": "display: flex; gap: 121px; margin: 0 64px 0 0; list-style: none; padding: 0; box-sizing: border-box;",
@@ -368,13 +388,14 @@
                               "style": "display: unset;"
                             }
                           ],
-                          "style": "display: none; color: black; opacity: 0.5; font-weight: bold; font-size: 10px; letter-spacing: 1.67px;",
+                          "style": "display: none; color: black; opacity: 0.55; font-weight: bold; font-size: 10px; letter-spacing: 1.67px;",
                           "text": "cwrapArray[cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures]]"
                         },
                         {
                           "element": "img",
                           "text": "cwrapArray[cwrapBreak cwrapBreak cwrapArray[cwrapOmit] cwrapBreak cwrapArray[cwrapOmit] cwrapBreak cwrapArray[cwrapOmit,cwrapOmit] cwrapBreak cwrapArray[cwrapOmit,cwrapOmit] cwrapBreak cwrapArray[cwrapOmit,cwrapOmit] cwrapBreak cwrapArray[cwrapOmit,cwrapOmit]]",
                           "attributes": {
+                            "alt": "check mark",
                             "src": "../static/images/pricing/desktop/check.svg"
                           }
                         }

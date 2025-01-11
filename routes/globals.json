@@ -4,7 +4,7 @@
         "link": [
             {
                 "rel": "shortcut icon",
-                "href": "favicon.ico",
+                "href": "https://villager88.github.io/cwrap-photosnap-multi-page-website/static/favicon/favicon.ico",
                 "type": "image/x-icon"
             },
             {
@@ -33,9 +33,9 @@
     },
     "classroom": [
         {
-            "name": "body",
+            "name": "body:has(#mobile-nav-button:checked)",
             "type": "element",
-            "style": "font-family: DM Sans, serif;"
+            "style": "font-family: DM Sans, serif; overflow-y: clip;"
         },
         {
             "name": "title",
@@ -73,127 +73,165 @@
                 "date": "April 16th 2020",
                 "title": "The Mountains",
                 "author": "by John Appleseed",
-                "image": "static/images/stories/desktop/mountains.jpg"
+                "image": "static/images/stories/desktop/mountains.jpg",
+                "imageMobile": "static/images/stories/mobile/mountains.jpg",
+                "alt": "The Mountains"
             },
             {
                 "date": "April 14th 2020",
                 "title": "Sunset Cityscapes",
                 "author": "by Benjamin Cruz",
-                "image": "static/images/stories/desktop/cityscapes.jpg"
+                "image": "static/images/stories/desktop/cityscapes.jpg",
+                "imageMobile": "static/images/stories/mobile/cityscapes.jpg",
+                "alt": "Sunset Cityscapes"
             },
             {
                 "date": "April 11th 2020",
                 "title": "18 Days Voyage",
                 "author": "by Alexei Borodin",
-                "image": "static/images/stories/desktop/18-days-voyage.jpg"
+                "image": "static/images/stories/desktop/18-days-voyage.jpg",
+                "imageMobile": "static/images/stories/mobile/18-days-voyage.jpg",
+                "alt": "18 Days Voyage"
             },
             {
                 "date": "April 9th 2020",
                 "title": "Architecturals",
                 "author": "by Samantha Brooke",
-                "image": "static/images/stories/desktop/architecturals.jpg"
+                "image": "static/images/stories/desktop/architecturals.jpg",
+                "imageMobile": "static/images/stories/mobile/architecturals.jpg",
+                "alt": "Architecturals"
             },
             {
                 "date": "April 7th 2020",
                 "title": "World Tour 2019",
                 "author": "by Mohammed Abdul",
-                "image": "static/images/stories/desktop/world-tour.jpg"
+                "image": "static/images/stories/desktop/world-tour.jpg",
+                "imageMobile": "static/images/stories/mobile/world-tour.jpg",
+                "alt": "World Tour 2019"
             },
             {
                 "date": "April 3rd 2020",
                 "title": "Unforeseen Corners",
                 "author": "by William Malcolm",
-                "image": "static/images/stories/desktop/unforeseen-corners.jpg"
+                "image": "static/images/stories/desktop/unforeseen-corners.jpg",
+                "imageMobile": "static/images/stories/mobile/unforeseen-corners.jpg",
+                "alt": "Unforeseen Corners"
             },
             {
                 "date": "March 29th 2020",
                 "title": "King on Africa: Part II",
                 "author": "by Tim Hillenburg",
-                "image": "static/images/stories/desktop/king-on-africa.jpg"
+                "image": "static/images/stories/desktop/king-on-africa.jpg",
+                "imageMobile": "static/images/stories/mobile/king-on-africa.jpg",
+                "alt": "King on Africa: Part II"
             },
             {
                 "date": "March 21st 2020",
                 "title": "The Trip to Nowhere",
                 "author": "by Felicia Rourke",
-                "image": "static/images/stories/desktop/trip-to-nowhere.jpg"
+                "image": "static/images/stories/desktop/trip-to-nowhere.jpg",
+                "imageMobile": "static/images/stories/mobile/trip-to-nowhere.jpg",
+                "alt": "The Trip to Nowhere"
             },
             {
                 "date": "March 19th 2020",
                 "title": "Rage of The Sea",
                 "author": "by Mohammed Abdul",
-                "image": "static/images/stories/desktop/rage-of-the-sea.jpg"
+                "image": "static/images/stories/desktop/rage-of-the-sea.jpg",
+                "imageMobile": "static/images/stories/mobile/rage-of-the-sea.jpg",
+                "alt": "Rage of The Sea"
             },
             {
                 "date": "March 16th 2020",
                 "title": "Running Free",
                 "author": "by Michelle",
-                "image": "static/images/stories/desktop/running-free.jpg"
+                "image": "static/images/stories/desktop/running-free.jpg",
+                "imageMobile": "static/images/stories/mobile/running-free.jpg",
+                "alt": "Running Free"
             },
             {
                 "date": "March 11th 2020",
                 "title": "Behind the Waves",
                 "author": "by Lamarr Wilson",
-                "image": "static/images/stories/desktop/behind-the-waves.jpg"
+                "image": "static/images/stories/desktop/behind-the-waves.jpg",
+                "imageMobile": "static/images/stories/mobile/behind-the-waves.jpg",
+                "alt": "Behind the Waves"
             },
             {
                 "date": "March 9th 2020",
                 "title": "Calm Waters",
                 "author": "by Samantha Brooke",
-                "image": "static/images/stories/desktop/calm-waters.jpg"
+                "image": "static/images/stories/desktop/calm-waters.jpg",
+                "imageMobile": "static/images/stories/mobile/calm-waters.jpg",
+                "alt": "Calm Waters"
             },
             {
                 "date": "March 5th 2020",
                 "title": "The Milky Way",
                 "author": "by Benjamin Cruz",
-                "image": "static/images/stories/desktop/milky-way.jpg"
+                "image": "static/images/stories/desktop/milky-way.jpg",
+                "imageMobile": "static/images/stories/mobile/milky-way.jpg",
+                "alt": "The Milky Way"
             },
             {
                 "date": "March 4th 2020",
                 "title": "Night at The Dark Forest",
                 "author": "by Mohammed Abdul",
-                "image": "static/images/stories/desktop/dark-forest.jpg"
+                "image": "static/images/stories/desktop/dark-forest.jpg",
+                "imageMobile": "static/images/stories/mobile/dark-forest.jpg",
+                "alt": "Night at The Dark Forest"
             },
             {
                 "date": "March 1st 2020",
                 "title": "Somwarpet’s Beauty",
                 "author": "by Michelle",
-                "image": "static/images/stories/desktop/somwarpet.jpg"
+                "image": "static/images/stories/desktop/somwarpet.jpg",
+                "imageMobile": "static/images/stories/mobile/somwarpet.jpg",
+                "alt": "Somwarpet’s Beauty"
             },
             {
                 "date": "February 25th 2020",
                 "title": "Land of Dreams",
                 "author": "by William Malcolm",
-                "image": "static/images/stories/desktop/land-of-dreams.jpg"
+                "image": "static/images/stories/desktop/land-of-dreams.jpg",
+                "imageMobile": "static/images/stories/mobile/land-of-dreams.jpg",
+                "alt": "Land of Dreams"
             }
         ],
         "features": [
             {
                 "title": "100% Responsive",
+                "alt": "Responsive design illustration",
                 "description": "No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen",
                 "image": "static/images/features/desktop/responsive.svg"
             },
             {
                 "title": "No Photo Upload Limit",
+                "alt": "No upload limit illustration",
                 "description": "Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.",
                 "image": "static/images/features/desktop/no-limit.svg"
             },
             {
                 "title": "Available to Embed",
+                "alt": "Embed media illustration",
                 "description": "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more.",
                 "image": "static/images/features/desktop/embed.svg"
             },
             {
                 "title": "Custom Domain",
+                "alt": "Custom domain illustration",
                 "description": "With Photosnap subscriptions you can host your stories on your own domain. You can also remove our branding!",
                 "image": "static/images/features/desktop/custom-domain.svg"
             },
             {
                 "title": "Boost Your Exposure",
+                "alt": "Boost exposure illustration",
                 "description": "Users that viewed your story or gallery can easily get notifed of new and featured stories with our built in mailing list.",
                 "image": "static/images/features/desktop/boost-exposure.svg"
             },
             {
                 "title": "Drag & Drop Image",
+                "alt": "Drag and drop illustration",
                 "description": "Easily drag and drop your image and get beautiful shots everytime. No over the top tooling to add friction to creating stories.",
                 "image": "static/images/features/desktop/drag-drop.svg"
             }
@@ -202,12 +240,16 @@
             "features": {
                 "title": "FEATURES",
                 "description": "We make sure all of our features are designed to be loved by every aspiring and even professional photographers who wanted to share their stories.",
-                "image": "static/images/features/desktop/hero.jpg"
+                "image": "static/images/features/desktop/hero.jpg",
+                "imageTablet": "static/images/features/tablet/hero.jpg",
+                "imageMobile": "static/images/features/mobile/hero.jpg"
             },
             "pricing": {
                 "title": "PRICING",
                 "description": "Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos.",
-                "image": "static/images/pricing/desktop/hero.jpg"
+                "image": "static/images/pricing/desktop/hero.jpg",
+                "imageTablet": "static/images/pricing/tablet/hero.jpg",
+                "imageMobile": "static/images/pricing/mobile/hero.jpg"
             }
         },
         "allFeatures": "cwrapArray[BASIC,PRO,BUSINESS]"
