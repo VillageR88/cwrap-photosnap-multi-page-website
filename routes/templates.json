@@ -830,7 +830,7 @@
                         "style": "display: flex; flex-direction: column;"
                     }
                 ],
-                "style": "max-width: 1440px; justify-content: center; display: grid; list-style: none; margin: 0 auto; padding: 0; box-sizing: border-box; width: 100%; grid-template-columns: repeat(auto-fit, minmax(0, 360px));",
+                "style": "max-width: 1440px; justify-content: center; display: grid; list-style: none; margin: 0 auto; padding: 0; box-sizing: border-box; width: 100%; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));",
                 "blueprint": {
                     "count": "cwrapProperty[galleryCount=4]",
                     "element": "li",
@@ -840,14 +840,14 @@
                             "style": "min-width: unset;"
                         }
                     ],
-                    "style": "min-width: 360px; background-color: white;",
+                    "style": "display: flex; width: 100%; background-color: white;",
                     "children": [
                         {
                             "element": "a",
                             "attributes": {
                                 "href": "#"
                             },
-                            "style": "transition: 0.3s;; z-index:1; text-decoration: none; max-height: 500px; height: 100%; display: flex; align-items: end; position: relative; cursor: pointer;",
+                            "style": "transition: 0.3s; width: 100%; z-index:1; text-decoration: none; width: height: 100%; display: flex; align-items: end; position: relative; cursor: pointer;",
                             "extend": [
                                 {
                                     "extension": ":hover",

@@ -1,4 +1,25 @@
 {
+  "head": {
+    "link": [
+      {
+        "rel": "shortcut icon",
+        "href": "../favicon.ico",
+        "type": "image/x-icon"
+      },
+      {
+        "rel": "prefetch",
+        "href": "../"
+      },
+      {
+        "rel": "prefetch",
+        "href": "../stories"
+      },
+      {
+        "rel": "prefetch",
+        "href": "../features"
+      }
+    ]
+  },
   "classroom": [
     {
       "name": "payment-select:has(input:checked) span:nth-of-type(2)",
@@ -23,17 +44,17 @@
     {
       "name": "payment-type-span",
       "type": "class",
-      "style": "font-weight: bold; font-size: 18px; line-height: 25px; color: black; opacity: 0.55; transition: opacity 300ms;"
+      "style": "color: black; font-size: 18px; font-weight: bold; line-height: 25px; opacity: 0.55; transition: opacity 300ms;"
     },
     {
       "name": "title-plan",
       "type": "class",
-      "style": "margin: 0; font-size: 24px; font-weight: bold; line-height: 25px;"
+      "style": "font-size: 24px; font-weight: bold; line-height: 25px; margin: 0;"
     },
     {
       "name": "title-compare",
       "type": "class",
-      "style": "color: black; font-weight: bold; font-size: 12px; letter-spacing: 2px; margin: 0;"
+      "style": "color: black; font-size: 12px; font-weight: bold; letter-spacing: 2px; margin: 0;"
     }
   ],
   "element": "cwrap-template",
@@ -54,14 +75,14 @@
               "style": "margin-top: 64px;"
             }
           ],
-          "style": "padding-inline: 29px; margin-top: 120px; display: flex; flex-direction: column; align-items: center; gap: 48px;",
+          "style": "align-items: center; display: flex; flex-direction: column; gap: 48px; margin-top: 120px; padding-inline: 29px;",
           "children": [
             {
               "element": "div",
               "attributes": {
                 "id": "payment-select"
               },
-              "style": "display: flex; justify-content: space-between; align-items: center; gap: 32px;",
+              "style": "align-items: center; display: flex; gap: 32px; justify-content: space-between;",
               "children": [
                 {
                   "element": "span",
@@ -81,7 +102,7 @@
                       "style": "background-color: black;"
                     }
                   ],
-                  "style": "cursor: pointer; width: 64px; padding-inline: 4px; height: 32px; background-color: #DFDFDF; border-radius: 16px; box-sizing: border-box; display: flex; align-items: center; justify-content: start; transition: justify-content 300ms, transform 300ms, background-color 300ms;",
+                  "style": "align-items: center; background-color: #DFDFDF; border-radius: 16px; box-sizing: border-box; cursor: pointer; display: flex; height: 32px; justify-content: start; padding-inline: 4px; transition: justify-content 300ms, transform 300ms, background-color 300ms; width: 64px;",
                   "children": [
                     {
                       "element": "input",
@@ -90,11 +111,11 @@
                         "name": "payment-type-input",
                         "type": "checkbox"
                       },
-                      "style": "cursor: pointer; appearance: none; padding: 0; margin: 0; background-color: black; width: 24px; height: 24px; border-radius: 50%; box-sizing: border-box; transition: transform 300ms, background-color 300ms;",
+                      "style": "appearance: none; background-color: black; border-radius: 50%; box-sizing: border-box; cursor: pointer; height: 24px; margin: 0; padding: 0; transition: transform 300ms, background-color 300ms; width: 24px;",
                       "extend": [
                         {
                           "extension": ":checked",
-                          "style": "transform: translateX(32px); background-color: white;"
+                          "style": "background-color: white; transform: translateX(32px);"
                         }
                       ]
                     }
@@ -114,38 +135,38 @@
               "mediaQueries": [
                 {
                   "query": "max-width: 1280px",
-                  "style": "flex-direction: column; padding-inline: 40px; max-width: 689px; margin:0; padding: 0; list-style: none;"
+                  "style": "flex-direction: column; list-style: none; margin: 0; max-width: 689px; padding-inline: 40px; padding: 0;"
                 }
               ],
-              "style": "margin:0; padding: 0; box-sizing: border-box; list-style:none; display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1110px; gap: 30px;",
+              "style": "align-items: center; box-sizing: border-box; display: flex; gap: 30px; justify-content: space-between; list-style: none; margin: 0; max-width: 1110px; padding: 0; width: 100%;",
               "blueprint": {
                 "count": "3",
                 "element": "li",
                 "mediaQueries": [
                   {
                     "query": "max-width: 1280px",
-                    "style": "max-width: unset; align-items: start; min-height: 270px;"
+                    "style": "align-items: start; max-width: unset; min-height: 270px;"
                   },
                   {
                     "query": "max-width: 840px",
-                    "style": "text-align: center; align-items: center; gap: 40px; "
+                    "style": "align-items: center; gap: 40px; text-align: center;"
                   }
                 ],
-                "style": "position: relative; color: cwrapArray[black,white,black]; padding: 56px 40px 40px 40px; box-sizing: border-box; background-color: cwrapArray[#F5F5F5,black,#F5F5F5]; max-width: 350px; width: 100%; min-height: cwrapArray[407,470,407]px; align-items: center; display: flex; flex-direction: column; text-align: center; justify-content: space-between;",
+                "style": "align-items: center; background-color: cwrapArray[#F5F5F5,black,#F5F5F5]; box-sizing: border-box; color: cwrapArray[black,white,black]; display: flex; flex-direction: column; justify-content: space-between; max-width: 350px; min-height: cwrapArray[407,470,407]px; padding: 56px 40px 40px 40px; position: relative; text-align: center; width: 100%;",
                 "children": [
                   {
                     "element": "section",
                     "mediaQueries": [
                       {
                         "query": "max-width: 1280px",
-                        "style": "text-align: start; align-items: start;"
+                        "style": "align-items: start; text-align: start;"
                       },
                       {
                         "query": "max-width: 840px",
-                        "style": "text-align: center; align-items: center;"
+                        "style": "align-items: center; text-align: center;"
                       }
                     ],
-                    "style": " max-width: 270px; display: flex; flex-direction: column; align-items:center; gap: 18px;",
+                    "style": "align-items: center; display: flex; flex-direction: column; gap: 18px; max-width: 270px;",
                     "children": [
                       {
                         "element": "h2",
@@ -189,7 +210,7 @@
                             "style": "justify-content: center;"
                           }
                         ],
-                        "style": "display: flex; visibility: hidden; align-items: center; justify-content: center; margin: 0; font-size: 40px; font-weight: bold; line-height: 48px; letter-spacing: 4.17px;",
+                        "style": "align-items: center; display: flex; font-size: 40px; font-weight: bold; justify-content: center; letter-spacing: 4.17px; line-height: 48px; margin: 0; visibility: hidden;",
                         "text": "placeholder",
                         "children": [
                           {
@@ -197,7 +218,7 @@
                             "attributes": {
                               "class": "per-month"
                             },
-                            "style": "position: absolute; opacity: 0; visibility: visible; transition: 300ms ;",
+                            "style": "opacity: 0; position: absolute; transition: 300ms; visibility: visible;",
                             "text": "$cwrapArray[19,39,99].00"
                           },
                           {
@@ -205,7 +226,7 @@
                             "attributes": {
                               "class": "per-year"
                             },
-                            "style": "position: absolute; opacity: 0; visibility: visible; transition: 300ms;",
+                            "style": "opacity: 0; position: absolute; transition: 300ms; visibility: visible;",
                             "text": "$cwrapArray[190,390,990].00"
                           }
                         ]
@@ -222,7 +243,7 @@
                             "style": "justify-content: center;"
                           }
                         ],
-                        "style": "display: flex; visibility: hidden; align-items: center; justify-content: center; position: relative; width: 100%;",
+                        "style": "align-items: center; display: flex; justify-content: center; position: relative; visibility: hidden; width: 100%;",
                         "attributes": {
                           "class": "description"
                         },
@@ -233,7 +254,7 @@
                             "attributes": {
                               "class": "per-month"
                             },
-                            "style": "position: absolute; opacity: 0; visibility: visible; transition: 300ms;",
+                            "style": "opacity: 0; position: absolute; transition: 300ms; visibility: visible;",
                             "text": "per month"
                           },
                           {
@@ -241,7 +262,7 @@
                             "attributes": {
                               "class": "per-year"
                             },
-                            "style": "position: absolute; opacity: 0; visibility: visible; transition: 300ms;",
+                            "style": "opacity: 0; position: absolute; transition: 300ms; visibility: visible;",
                             "text": "per year"
                           }
                         ]
@@ -256,7 +277,7 @@
                         "style": "background-color: #DFDFDF; color: black;"
                       }
                     ],
-                    "style": "max-width: 270px; transition: 300ms; font-weight: bold; font-size: 12px; letter-spacing: 2px; cursor: pointer; color: cwrapArray[white,black,white]; background-color: cwrapArray[black,white,black]; width: 100%; min-height: 40px; border:none;",
+                    "style": "background-color: cwrapArray[black,white,black]; border: none; color: cwrapArray[white,black,white]; cursor: pointer; font-size: 12px; font-weight: bold; letter-spacing: 2px; max-width: 270px; min-height: 40px; transition: 300ms; width: 100%;",
                     "text": "PICK PLAN"
                   }
                 ]
@@ -280,14 +301,14 @@
               "style": "padding-inline: 29px;"
             }
           ],
-          "style": "margin-block: 160px; margin-inline: auto; display: flex; flex-direction: column; align-items: center;",
+          "style": "align-items: center; display: flex; flex-direction: column; margin-block: 160px; margin-inline: auto;",
           "children": [
             {
               "element": "h2",
               "mediaQueries": [
                 {
                   "query": "max-width: 840px",
-                  "style": "display:none;"
+                  "style": "display: none;"
                 }
               ],
               "attributes": {
@@ -303,7 +324,7 @@
                   "style": "padding-left: unset;"
                 }
               ],
-              "style": "margin-top: 56px; display: flex; align-items: start; justify-content: space-between; width: 100%; max-width: 731px; padding-left: 24px; box-sizing: border-box; min-height: 39px; border-bottom: 1px solid black;",
+              "style": "align-items: start; border-bottom: 1px solid black; box-sizing: border-box; display: flex; justify-content: space-between; margin-top: 56px; max-width: 731px; min-height: 39px; padding-left: 24px; width: 100%;",
               "children": [
                 {
                   "element": "h3",
@@ -320,7 +341,7 @@
                       "style": "display: none;"
                     }
                   ],
-                  "style": "display: flex; margin: 0; padding: 0; box-sizing: border-box; list-style: none;",
+                  "style": "box-sizing: border-box; display: flex; list-style: none; margin: 0; padding: 0;",
                   "blueprint": {
                     "count": "3",
                     "element": "li",
@@ -330,7 +351,7 @@
                         "attributes": {
                           "class": "title-compare"
                         },
-                        "style": "width: 140px; text-align: center;",
+                        "style": "text-align: center; width: 140px;",
                         "text": "cwrapArray[BASIC,PRO,BUSINESS]"
                       }
                     ]
@@ -340,17 +361,17 @@
             },
             {
               "element": "ul",
-              "style": "width: 100%; max-width: 731px; padding: 0; box-sizing: border-box; margin: 0; list-style: none;",
+              "style": "box-sizing: border-box; list-style: none; margin: 0; max-width: 731px; padding: 0; width: 100%;",
               "blueprint": {
                 "count": "8",
                 "element": "li",
                 "mediaQueries": [
                   {
                     "query": "max-width: 768px",
-                    "style": "gap: 17px; flex-direction: column; min-height: 65px; padding-block: 23px; align-items: start;"
+                    "style": "align-items: start; flex-direction: column; gap: 17px; min-height: 65px; padding-block: 23px;"
                   }
                 ],
-                "style": "min-height: 65px; justify-content: space-between; display: flex; align-items: center; border-bottom: 1px solid #DFDFDF;",
+                "style": "align-items: center; border-bottom: 1px solid #DFDFDF; display: flex; justify-content: space-between; min-height: 65px;",
                 "children": [
                   {
                     "element": "h3",
@@ -360,7 +381,7 @@
                         "style": "margin-left: 0;"
                       }
                     ],
-                    "style": "margin-left: 24px",
+                    "style": "margin-left: 24px;",
                     "text": "cwrapArray[UNLIMITED STORY POSTING,UNLIMITED PHOTO UPLOAD,EMBEDDING CUSTOM CONTENT,CUSTOMIZE METADATA,ADVANCED METRICS,PHOTO DOWNLOADS,SEARCH ENGINE INDEXING,CUSTOM ANALYTICS]",
                     "attributes": {
                       "class": "title-compare"
@@ -371,14 +392,14 @@
                     "mediaQueries": [
                       {
                         "query": "max-width: 768px",
-                        "style": "justify-content: space-between; width: 80%; gap: unset;"
+                        "style": "gap: unset; justify-content: space-between; width: 80%;"
                       }
                     ],
-                    "style": "display: flex; gap: 121px; margin: 0 64px 0 0; list-style: none; padding: 0; box-sizing: border-box;",
+                    "style": "box-sizing: border-box; display: flex; gap: 121px; list-style: none; margin: 0 64px 0 0; padding: 0;",
                     "blueprint": {
                       "count": "3",
                       "element": "li",
-                      "style": "display: flex; flex-direction: column; align-items: start; gap: 8px;",
+                      "style": "align-items: start; display: flex; flex-direction: column; gap: 8px;",
                       "children": [
                         {
                           "element": "span",
@@ -388,7 +409,7 @@
                               "style": "display: unset;"
                             }
                           ],
-                          "style": "display: none; color: black; opacity: 0.55; font-weight: bold; font-size: 10px; letter-spacing: 1.67px;",
+                          "style": "color: black; display: none; font-size: 10px; font-weight: bold; letter-spacing: 1.67px; opacity: 0.55;",
                           "text": "cwrapArray[cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures] cwrapBreak cwrapGlobal[allFeatures]]"
                         },
                         {

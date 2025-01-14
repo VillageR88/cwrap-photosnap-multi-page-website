@@ -208,9 +208,19 @@ function createElementFromJson(
         } else if (part.startsWith("cwrapTemplate")) {
           const propMap = new Map(properties);
 
-          const templateNameWithProps = part.match(
-            /cwrapTemplate\[([^\]]+)\]/
-          )[1];
+          let templateNameWithProps;
+          if (isDevelopment) {
+            try {
+              templateNameWithProps = part.match(
+                /cwrapTemplate\[([^\]]+)\]/
+              )[1];
+            } catch (error) {
+              console.error("Error processing template:", part, error);
+              continue;
+            }
+          } else {
+            templateNameWithProps = part.match(/cwrapTemplate\[([^\]]+)\]/)[1];
+          }
           const templateName =
             templateNameWithProps.match(/.+(?=\()/)?.[0] ||
             templateNameWithProps;
@@ -612,9 +622,12 @@ function processStaticRouteDirectory(routeDir, buildDir, index) {
       globalsHead = globalsJson.head;
     }
   }
-  const mergedHead = jsonObj.head
-    ? { ...globalsHead, ...jsonObj.head }
-    : globalsHead;
+  const mergedHead = { ...globalsHead, ...jsonObj.head };
+  for (const key in globalsHead) {
+    if (Array.isArray(globalsHead[key]) && Array.isArray(jsonObj.head?.[key])) {
+      mergedHead[key] = [...globalsHead[key], ...jsonObj.head[key]];
+    }
+  }
   headContent = generateHeadHtml(mergedHead, jsonFile);
 
   // Generate HTML content from JSON and append the script tag
@@ -1036,7 +1049,7 @@ function generateCssSelector(
                 try {
                   templatePropsMap.set(key.trim(), value.trim());
                 } catch (error) {
-                    throw new Error(`Error processing template: ${jsonObj.text}`);
+                  throw new Error(`Error processing template: ${jsonObj.text}`);
                 }
               } else templatePropsMap.set(key.trim(), value.trim());
             }

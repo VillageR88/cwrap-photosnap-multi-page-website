@@ -1,4 +1,25 @@
 {
+  "head": {
+    "link": [
+      {
+        "rel": "shortcut icon",
+        "href": "../favicon.ico",
+        "type": "image/x-icon"
+      },
+      {
+        "rel": "prefetch",
+        "href": "../"
+      },
+      {
+        "rel": "prefetch",
+        "href": "../features"
+      },
+      {
+        "rel": "prefetch",
+        "href": "../pricing"
+      }
+    ]
+  },
   "element": "cwrap-template",
   "omit": "footerBeta",
   "text": "cwrapTemplate[body(prefix=../,r2=current-route,backgroundColor=black)]",
@@ -15,7 +36,7 @@
               "style": "flex-direction: column; height: unset;"
             }
           ],
-          "style": "height: 650px; margin-inline: auto; max-width: 1440px; width: 100%; position: relative; display: flex; align-items: center; ",
+          "style": "align-items: center; display: flex; height: 650px; margin-inline: auto; max-width: 1440px; position: relative; width: 100%;",
           "children": [
             {
               "mediaQueries": [
@@ -25,7 +46,7 @@
                 }
               ],
               "element": "picture",
-              "style": "position: absolute; display: flex; width: 100%; height: 100%; object-fit: cover;",
+              "style": "display: flex; height: 100%; object-fit: cover; position: absolute; width: 100%;",
               "children": [
                 {
                   "element": "source",
@@ -43,7 +64,7 @@
                 },
                 {
                   "element": "img",
-                  "style": "width: 100%; object-fit: cover;",
+                  "style": "object-fit: cover; width: 100%;",
                   "attributes": {
                     "alt": "Moon of Appalachia",
                     "src": "../static/images/stories/desktop/moon-of-appalacia.jpg"
@@ -59,11 +80,11 @@
                   "style": "margin: auto; padding: 48px 28px;"
                 }
               ],
-              "style": "max-width: 387px; position: relative; display: flex; flex-direction: column; color: white; margin: auto auto auto 112px;",
+              "style": "color: white; display: flex; flex-direction: column; margin: auto auto auto 112px; max-width: 387px; position: relative;",
               "children": [
                 {
                   "element": "p",
-                  "style": "margin: 0; font-size: 12px; font-weight: bold; letter-spacing: 2px;",
+                  "style": "font-size: 12px; font-weight: bold; letter-spacing: 2px; margin: 0;",
                   "text": "LAST MONTH’S FEATURED STORY"
                 },
                 {
@@ -76,11 +97,11 @@
                 },
                 {
                   "element": "div",
-                  "style": "display: flex; gap: 9px; align-items: center; margin-top: 64px;",
+                  "style": "align-items: center; display: flex; gap: 9px; margin-top: 64px;",
                   "children": [
                     {
                       "element": "p",
-                      "style": "opacity: 0.75; font-size: 13px; margin: 0;",
+                      "style": "font-size: 13px; margin: 0; opacity: 0.75;",
                       "text": "March 2nd 2020"
                     },
                     {
@@ -92,7 +113,7 @@
                 },
                 {
                   "element": "p",
-                  "style": "opacity: 0.6; margin-block: 24px;",
+                  "style": "margin-block: 24px; opacity: 0.6;",
                   "attributes": {
                     "class": "description"
                   },

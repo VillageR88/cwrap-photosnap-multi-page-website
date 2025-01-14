@@ -1,4 +1,25 @@
 {
+  "head": {
+    "link": [
+      {
+        "rel": "shortcut icon",
+        "href": "../favicon.ico",
+        "type": "image/x-icon"
+      },
+      {
+        "rel": "prefetch",
+        "href": "../"
+      },
+      {
+        "rel": "prefetch",
+        "href": "../stories"
+      },
+      {
+        "rel": "prefetch",
+        "href": "../pricing"
+      }
+    ]
+  },
   "element": "cwrap-template",
   "text": "cwrapTemplate[body(prefix=../,r3=current-route)]",
   "passover": [
